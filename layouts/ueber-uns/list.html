@@ -1,51 +1,156 @@
 {{ define "main" }}
 <style>
-/* Enhanced h2 styling within page-content for this page */
+/* ══════════════════════════════════════════════════════
+   ÜBER UNS PAGE — Design System Applied
+══════════════════════════════════════════════════════ */
+
+/* h2 → section-divider style (matches termine-section-header) */
 .page-content h2 {
-  position: relative;
-  padding-bottom: 0.5rem;
-  margin-bottom: var(--space-sm) !important;
+  font-family: var(--font-display) !important;
+  font-size: 0.78rem !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.14em !important;
+  text-transform: uppercase !important;
+  color: var(--sage) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: 1rem !important;
+  margin-top: var(--space-lg) !important;
+  margin-bottom: var(--space-md) !important;
+  padding-bottom: 0 !important;
+  position: static !important;
+  line-height: 1.4 !important;
+}
+.page-content h2::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: rgba(27, 58, 45, 0.18);
+  flex-shrink: 0;
 }
 .page-content h2::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 2rem;
-  height: 2px;
-  background: var(--amber);
-  border-radius: 2px;
+  content: '' !important;
+  display: block !important;
+  position: static !important;
+  flex: 1 !important;
+  height: 1px !important;
+  width: auto !important;
+  background: linear-gradient(to right, rgba(27, 58, 45, 0.18), transparent) !important;
+  background-color: transparent !important;
+  border-radius: 0 !important;
+  bottom: auto !important;
+  left: auto !important;
 }
 
-/* Bridge section */
-.ueber-uns-bridge {
-  border-top: 1px solid rgba(27, 58, 45, 0.1);
-  padding-top: var(--space-lg);
-  margin-top: var(--space-lg);
+/* Lead paragraph (first p after hero) */
+.ueber-lead {
+  font-size: 1.1rem;
+  line-height: 1.85;
+  color: rgba(61, 46, 30, 0.8);
   margin-bottom: var(--space-md);
 }
-.ueber-uns-bridge__title {
+
+/* ── Motto callout ── */
+.ueber-motto-block {
+  position: relative;
+  background: var(--forest);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-md) var(--space-md) 5rem;
+  color: var(--cream);
+  overflow: hidden;
+  margin-bottom: var(--space-md);
+}
+.ueber-motto-block::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 100% at -10% 60%, rgba(107, 143, 113, 0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 60% at 100% 0%, rgba(196, 146, 58, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+.ueber-motto-block::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(246,241,234,0.07) 1px, transparent 1px);
+  background-size: 18px 18px;
+  pointer-events: none;
+}
+.ueber-motto-icon {
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--amber);
+  opacity: 0.7;
+  z-index: 1;
+}
+.ueber-motto-block p {
+  position: relative;
+  z-index: 1;
+  font-size: 0.95rem;
+  color: rgba(246, 241, 234, 0.82);
+  line-height: 1.8;
+  margin-bottom: 0 !important;
+}
+.ueber-motto-block strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+.ueber-motto-block em {
+  color: rgba(196, 146, 58, 0.95);
   font-family: var(--font-display);
-  font-weight: 400;
-  font-variation-settings: "opsz" 72;
-  font-size: clamp(1.75rem, 3vw, 2.5rem);
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  color: var(--forest);
-  margin-bottom: var(--space-xs);
-  /* Override the ::after pseudo from h2 above since it's a section title */
-  padding-bottom: 0 !important;
-}
-.ueber-uns-bridge__title::after {
-  display: none !important;
-}
-.ueber-uns-bridge__text {
-  font-size: 1.05rem;
-  color: rgba(61, 46, 30, 0.65);
-  max-width: 560px;
+  font-size: 1.1em;
+  font-variation-settings: "opsz" 20;
 }
 
-/* Improve the gruppenleitung photo rendering */
+/* ── Geschichte timeline ── */
+.ueber-history {
+  position: relative;
+  padding-left: 2.25rem;
+}
+.ueber-history::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 1.5px;
+  background: linear-gradient(to bottom, var(--amber), var(--sage), rgba(107, 143, 113, 0.1));
+  border-radius: 2px;
+}
+.ueber-history p {
+  position: relative;
+  margin-bottom: var(--space-md) !important;
+  font-size: 0.925rem;
+  line-height: 1.85;
+  color: rgba(61, 46, 30, 0.8);
+}
+.ueber-history p::before {
+  content: '';
+  position: absolute;
+  left: -2.15rem;
+  top: 0.55em;
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--cream);
+  border: 2px solid var(--amber);
+  box-shadow: 0 0 0 3px rgba(196, 146, 58, 0.12);
+}
+.ueber-history p:last-child {
+  margin-bottom: 0 !important;
+}
+.ueber-history p:last-child::before {
+  border-color: var(--sage);
+  box-shadow: 0 0 0 3px rgba(107, 143, 113, 0.12);
+}
+
+/* ── Gruppenleitung image in content ── */
 .page-content img {
   border-radius: var(--radius-md);
   box-shadow: 0 8px 32px rgba(27, 58, 45, 0.12);
@@ -53,22 +158,149 @@
   border: 1px solid rgba(27, 58, 45, 0.07);
 }
 
-/* Style "Unsere Geschichte" as a timeline — The h2 "Unsere Geschichte" and its following paragraphs get timeline treatment */
-.page-content .history-section {
-  position: relative;
-  padding-left: var(--space-lg);
+/* ── Leader section ── */
+.ueber-leaders-section {
+  margin-top: var(--space-lg);
 }
-.page-content .history-section::before {
+
+.ueber-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: var(--space-md);
+}
+.ueber-section-header::before {
   content: '';
-  position: absolute;
-  left: 0;
-  top: 0.5rem;
-  bottom: 0.5rem;
-  width: 2px;
-  background: linear-gradient(to bottom, var(--amber), var(--sage), rgba(107,143,113,0.1));
-  border-radius: 2px;
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: rgba(27, 58, 45, 0.18);
+  flex-shrink: 0;
+}
+.ueber-section-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(27, 58, 45, 0.18), transparent);
+}
+.ueber-section-title {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+.ueber-section-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+/* ── Leader grid ── */
+.leader-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1px;
+  background: rgba(27, 58, 45, 0.1);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.leader-card-v2 {
+  background: var(--white);
+  padding: 1.75rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.leader-card-v2:hover {
+  background: rgba(246, 241, 234, 0.7);
+}
+
+.leader-avatar-v2 {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-variation-settings: "opsz" 24;
+  margin-bottom: 0.9rem;
+  letter-spacing: 0.02em;
+}
+
+/* Cycle avatar colors */
+.leader-card-v2:nth-child(4n+1) .leader-avatar-v2 {
+  background: rgba(27, 58, 45, 0.1);
+  color: var(--forest);
+  border: 1.5px solid rgba(27, 58, 45, 0.15);
+}
+.leader-card-v2:nth-child(4n+2) .leader-avatar-v2 {
+  background: rgba(196, 146, 58, 0.1);
+  color: #9a6e1f;
+  border: 1.5px solid rgba(196, 146, 58, 0.2);
+}
+.leader-card-v2:nth-child(4n+3) .leader-avatar-v2 {
+  background: rgba(107, 143, 113, 0.12);
+  color: #456b4a;
+  border: 1.5px solid rgba(107, 143, 113, 0.2);
+}
+.leader-card-v2:nth-child(4n+4) .leader-avatar-v2 {
+  background: rgba(212, 115, 78, 0.1);
+  color: #a84e2a;
+  border: 1.5px solid rgba(212, 115, 78, 0.18);
+}
+
+.leader-name-v2 {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 500;
+  font-variation-settings: "opsz" 20;
+  color: var(--bark);
+  margin-bottom: 0.2rem;
+  line-height: 1.3;
+}
+
+.leader-role-v2 {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+}
+
+/* Leaders grid spacing when directly under photo */
+.leader-grid-v2 {
+  margin-top: var(--space-sm);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ueber-motto-block {
+    padding: 3.5rem var(--space-md) var(--space-md);
+  }
+  .ueber-motto-icon {
+    top: var(--space-md);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .leader-grid-v2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 </style>
+
 <section class="page-single">
   <div class="page-hero">
     <div class="page-hero-inner">
@@ -81,46 +313,73 @@
 
   <div class="page-content content-width" data-animate="fade-up" data-delay="2">
     {{ .Content }}
-
-    <script>
-(function() {
-  // Find the "Unsere Geschichte" h2 and wrap subsequent paragraphs
-  var headings = document.querySelectorAll('.page-content h2');
-  headings.forEach(function(h) {
-    if (h.textContent.trim().includes('Geschichte')) {
-      var wrapper = document.createElement('div');
-      wrapper.className = 'history-section';
-      var next = h.nextElementSibling;
-      // Insert wrapper after h2
-      h.parentNode.insertBefore(wrapper, next);
-      // Move all following p tags until next h2 into wrapper
-      while (next && next.tagName !== 'H2') {
-        var tmp = next.nextElementSibling;
-        wrapper.appendChild(next);
-        next = tmp;
-      }
-    }
-  });
-})();
-</script>
-
-    <div class="ueber-uns-bridge" data-animate="fade-up">
-      <span class="section-label">Unser Team</span>
-      <h2 class="ueber-uns-bridge__title">Gruppenleitung</h2>
-      <p class="ueber-uns-bridge__text">Unsere erfahrenen Gruppenleiterinnen und Gruppenleiter begleiten die Jugendlichen bei ihrem Abenteuer.</p>
-    </div>
-
     {{ with .Params.leaders }}
-    <div class="leader-grid">
-      {{ range $i, $l := . }}
-      <div class="leader-card" data-animate="fade-up" data-delay="{{ add $i 1 }}">
-        <div class="leader-avatar">{{ $l.initials }}</div>
-        <h3>{{ $l.name }}</h3>
-        <p class="leader-role">{{ $l.role }}</p>
+    <div class="leader-grid-v2" data-animate="fade-up">
+      {{ range . }}
+      <div class="leader-card-v2">
+        <div class="leader-avatar-v2">{{ .initials }}</div>
+        <div class="leader-name-v2">{{ .name }}</div>
+        <div class="leader-role-v2">{{ .role }}</div>
       </div>
       {{ end }}
     </div>
     {{ end }}
   </div>
+
+  <script>
+  (function () {
+    var content = document.querySelector('.page-content');
+    if (!content) return;
+
+    var children = Array.from(content.children);
+
+    // Helper: collect siblings until next H2 (or end)
+    function collectUntilH2(startEl) {
+      var nodes = [];
+      var el = startEl;
+      while (el && el.tagName !== 'H2') {
+        nodes.push(el);
+        el = el.nextElementSibling;
+      }
+      return nodes;
+    }
+
+    // Find h2 by keyword
+    function findH2(keyword) {
+      return Array.from(content.querySelectorAll('h2')).find(function(h) {
+        return h.textContent.includes(keyword);
+      });
+    }
+
+    // ── Wrap Motto section ──
+    var mottoH2 = findH2('Motto');
+    if (mottoH2) {
+      var mottoNodes = collectUntilH2(mottoH2.nextElementSibling);
+      if (mottoNodes.length) {
+        var mottoWrap = document.createElement('div');
+        mottoWrap.className = 'ueber-motto-block';
+        mottoWrap.innerHTML =
+          '<svg class="ueber-motto-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">' +
+          '<path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>' +
+          '</svg>';
+        mottoH2.parentNode.insertBefore(mottoWrap, mottoNodes[0]);
+        mottoNodes.forEach(function(n) { mottoWrap.appendChild(n); });
+      }
+    }
+
+    // ── Wrap Geschichte paragraphs ──
+    var histH2 = findH2('Geschichte');
+    if (histH2) {
+      var histNodes = collectUntilH2(histH2.nextElementSibling);
+      if (histNodes.length) {
+        var histWrap = document.createElement('div');
+        histWrap.className = 'ueber-history';
+        histH2.parentNode.insertBefore(histWrap, histNodes[0]);
+        histNodes.forEach(function(n) { histWrap.appendChild(n); });
+      }
+    }
+  })();
+  </script>
+
 </section>
 {{ end }}
