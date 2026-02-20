@@ -1,4 +1,4 @@
-baseURL = "https://pfadfinder-langenwang.at/"
+baseURL = "http://localhost:1313/"
 languageCode = "de-AT"
 title = "Pfadfinder Langenwang"
 # No theme — custom layouts used directly
