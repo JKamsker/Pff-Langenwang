@@ -2,29 +2,29 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://beta.pfadfinder-langenwang.at/termine/kindermaskenball-2026/</loc>
+    <loc>http://localhost:1313/termine/kindermaskenball-2026/</loc>
     <lastmod>2026-02-15T14:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/</loc>
+    <loc>http://localhost:1313/</loc>
     <lastmod>2026-02-15T14:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/termine/</loc>
+    <loc>http://localhost:1313/termine/</loc>
     <lastmod>2026-02-15T14:00:00+01:00</lastmod>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/categories/</loc>
+    <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/huetten/pfadfinderheim/</loc>
+    <loc>http://localhost:1313/huetten/pfadfinderheim/</loc>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/datenschutzerklaerung/</loc>
+    <loc>http://localhost:1313/datenschutzerklaerung/</loc>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/huetten/bootshuette/</loc>
+    <loc>http://localhost:1313/huetten/bootshuette/</loc>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/huetten/</loc>
+    <loc>http://localhost:1313/huetten/</loc>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/kontakt/</loc>
+    <loc>http://localhost:1313/kontakt/</loc>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/tags/</loc>
+    <loc>http://localhost:1313/tags/</loc>
   </url><url>
-    <loc>https://beta.pfadfinder-langenwang.at/ueber-uns/</loc>
+    <loc>http://localhost:1313/ueber-uns/</loc>
   </url>
 </urlset>

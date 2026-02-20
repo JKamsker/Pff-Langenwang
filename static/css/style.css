@@ -1126,6 +1126,18 @@ a {
     visibility: visible;
   }
 
+  /* Fix: when mobile nav is open, use dark text on cream background
+     even when header is in transparent (not-scrolled) mode */
+  .site-header:not(.is-scrolled) .site-nav.is-open .nav-link {
+    color: var(--bark);
+  }
+
+  .site-header:not(.is-scrolled) .site-nav.is-open .nav-link:hover,
+  .site-header:not(.is-scrolled) .site-nav.is-open .nav-link.is-active {
+    background: rgba(27, 58, 45, 0.07);
+    color: var(--forest);
+  }
+
   .nav-list {
     flex-direction: column;
     align-items: center;
@@ -2313,14 +2325,14 @@ html.theme-transition *::after {
 /* ---- Brand (scrolled state) ---- */
 [data-theme="dark"] .site-header.is-scrolled .brand-icon,
 [data-theme="dark"] .site-header.is-scrolled .brand-text {
-  color: #82cca2;
+  color: #74c096;
 }
 
 /* ---- Nav links (scrolled) ---- */
 [data-theme="dark"] .nav-link:hover,
 [data-theme="dark"] .nav-link.is-active {
   background: rgba(255, 255, 255, 0.06);
-  color: #82cca2;
+  color: #74c096;
 }
 
 /* ---- Theme toggle (scrolled, dark mode) ---- */
@@ -2349,7 +2361,7 @@ html.theme-transition *::after {
 [data-theme="dark"] .page-content h3,
 [data-theme="dark"] .venue-intro-text strong,
 [data-theme="dark"] .contact-address-hero__name {
-  color: #82cca2;
+  color: #74c096;
 }
 
 /* ---- Muted text (was hardcoded rgba(61,46,30,...)) ---- */
@@ -2422,13 +2434,13 @@ html.theme-transition *::after {
 [data-theme="dark"] .venue-feature-icon,
 [data-theme="dark"] .contact-address-hero__icon {
   background: rgba(130, 204, 162, 0.1);
-  color: #82cca2;
+  color: #74c096;
 }
 
 /* ---- Leader avatar ---- */
 [data-theme="dark"] .leader-card .leader-avatar {
   background: rgba(130, 204, 162, 0.1);
-  color: #82cca2;
+  color: #74c096;
 }
 
 [data-theme="dark"] .leader-card:hover .leader-avatar {
