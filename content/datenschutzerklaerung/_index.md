@@ -23,7 +23,7 @@ Wir verarbeiten Ihre personenbezogenen Daten aufgrund der datenschutzrechtlich r
 
 Fuer unsere Vereinsmitglieder benoetigen wir die bei der Anmeldung abgefragten persoenlichen Daten. Diese werden in der zentralen Mitgliederverwaltungsdatenbank SCOREG gespeichert und verarbeitet. Zusaetzlich werden die im Zuge einer Pfadfinderkarriere anfallenden Ereignisdaten und Ausbildungsschritte ebenfalls gespeichert. Der Zweck, diese Daten zu verarbeiten, besteht darin, unsere Mitglieder bei den Pfadfinder Langenwang, Steirischen Pfadfindern und PfadfinderInnen (StPP), bei den Pfadfindern und Pfadfinderinnen Oesterreich (PPOE) und bei den Weltverbaenden der Pfadfinder zu registrieren, mit unseren Mitgliedern in Kontakt treten zu koennen und diese in ihrem Pfadfinderleben zu begleiten.
 
-Wir haben auch ein berechtigtes Interesse daran, die Daten unserer ehemaligen Mitglieder zu kennen, da es fuer uns Pfadfinder von grosser Bedeutung ist, auch ehemalige Mitglieder kontaktieren zu koennen, sofern diese nicht die ausdrueckliche Loeschung bzw Anonymisierung ihrer persoenlichen Daten wuenschen.
+Wir haben auch ein berechtigtes Interesse daran, die Daten unserer ehemaligen Mitglieder zu kennen, da es fuer uns Pfadfinder von grosser Bedeutung ist, auch ehemalige Mitglieder kontaktieren zu koennen, sofern diese nicht die ausdrueckliche Loeschung bzw. Anonymisierung ihrer persoenlichen Daten wuenschen.
 
 Aus diesem Grunde werden wir die Daten unserer Mitglieder auch nach Ende der formalen Mitgliedschaft nicht automatisch loeschen.
 
@@ -34,7 +34,7 @@ Persoenliche Daten von Nichtmitgliedern werden von uns nur dann gespeichert, wen
 
 ## Veranstaltungen
 
-Speziell fuer Veranstaltungen erhobene Daten von Teilnehmern und Kontaktpersonen (zB Eltern, Lieferanten, Sponsoren) koennen in gehosteten Datenbanken gespeichert und verarbeitet werden. Diese Daten werden fuer Zwecke der Organisation der Veranstaltung verwendet und nach Wegfall des Zwecks, spaetestens drei Jahre nach Ende der Veranstaltung, geloescht. Es erfolgt keine Weitergabe, auch nicht innerhalb der Pfadfinderorganisation. Die von uns mit dem Hosting beauftragten Provider (Auftragsverarbeiter) unterliegen denselben datenschutzrechtlichen Verpflichtungen.
+Speziell fuer Veranstaltungen erhobene Daten von Teilnehmern und Kontaktpersonen (z.B. Eltern, Lieferanten, Sponsoren) koennen in gehosteten Datenbanken gespeichert und verarbeitet werden. Diese Daten werden fuer Zwecke der Organisation der Veranstaltung verwendet und nach Wegfall des Zwecks, spaetestens drei Jahre nach Ende der Veranstaltung, geloescht. Es erfolgt keine Weitergabe, auch nicht innerhalb der Pfadfinderorganisation. Die von uns mit dem Hosting beauftragten Provider (Auftragsverarbeiter) unterliegen denselben datenschutzrechtlichen Verpflichtungen.
 
 ## Kategorien von Empfaengern der personenbezogenen Daten
 
@@ -57,4 +57,3 @@ Sie koennen unter der og Adresse Auskunft ueber die zu Ihrer Person gespeicherte
 ## Beschwerderecht
 
 Bei Fragen zur Verarbeitung Ihrer personenbezogenen Daten koennen Sie sich an den Verantwortlichen wenden.
-

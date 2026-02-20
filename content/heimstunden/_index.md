@@ -33,6 +33,6 @@ info: "Fuer Information stehen wir Dir gerne zur Verfuegung! Jeden **Dienstag ab
 
 Unsere Heimstunden finden woechentlich am **Samstag** statt und sind das Herzstueck unserer Pfadfinderarbeit. Hier lernen die Kinder und Jugendlichen das Binden von Knoten, den Umgang mit Kompass und Karte, spielen gemeinsam und haben Spass.
 
-Die aktuellen Heimstundenzeiten findest du in der Tabelle weiter unten.
-
 *Willkommen im Abenteuer…*
+
+Die aktuellen Heimstundenzeiten findest du in der Tabelle weiter unten.
