@@ -3,6 +3,22 @@
 .contact-group {
   margin-bottom: var(--space-lg);
 }
+.kontakt-section-h2 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  color: var(--forest);
+  margin-bottom: var(--space-md);
+  font-variation-settings: "opsz" 48;
+  letter-spacing: -0.015em;
+}
+.kontakt-boathut-text {
+  margin-bottom: var(--space-md);
+  color: rgba(61, 46, 30, 0.7);
+}
+[data-theme="dark"] .kontakt-section-h2 { color: #82cca2; }
+[data-theme="dark"] .kontakt-boathut-text { color: rgba(213,205,192,0.65); }
+[data-theme="dark"] .contact-group--primary .contact-card { border-left-color: var(--amber); }
 </style>
 <section class="page-single">
   <div class="page-hero">
@@ -41,7 +57,7 @@
     {{ with .Params.leadership }}
     <div class="contact-group contact-group--primary" data-animate="fade-up">
       <span class="section-label">Ansprechpersonen</span>
-      <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--forest); margin-bottom: var(--space-md); font-variation-settings: 'opsz' 48; letter-spacing: -0.015em;">Gruppenleitung</h2>
+      <h2 class="kontakt-section-h2">Gruppenleitung</h2>
       <div class="contact-grid">
         {{ range $i, $l := . }}
         <div class="contact-card" data-animate="fade-up" data-delay="{{ add $i 1 }}">
@@ -69,7 +85,7 @@
     {{ with .Params.sections }}
     <div data-animate="fade-up" style="margin-top: var(--space-lg);">
       <span class="section-label">Nach Stufe</span>
-      <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--forest); margin-bottom: var(--space-md); font-variation-settings: 'opsz' 48; letter-spacing: -0.015em;">Stufenleiter</h2>
+      <h2 class="kontakt-section-h2">Stufenleiter</h2>
       <div class="contact-grid">
         {{ range $i, $sec := . }}
         <div class="contact-card" data-animate="fade-up" data-delay="{{ add $i 1 }}">
@@ -93,8 +109,8 @@
     {{ with .Params.boathut_email }}
     <div style="margin-top: var(--space-lg);" data-animate="fade-up">
       <span class="section-label">Wassersport</span>
-      <h2 style="font-family: var(--font-display); font-size: 1.5rem; font-weight: 400; color: var(--forest); margin-bottom: var(--space-sm); font-variation-settings: 'opsz' 48; letter-spacing: -0.015em;">Bootshütte Reservierung</h2>
-      <p style="margin-bottom: var(--space-md); color: rgba(61,46,30,0.7);">Die Bootshütte kann für Lager und Veranstaltungen gemietet werden.</p>
+      <h2 class="kontakt-section-h2" style="margin-bottom: var(--space-sm);">Bootshütte Reservierung</h2>
+      <p class="kontakt-boathut-text">Die Bootshütte kann für Lager und Veranstaltungen gemietet werden.</p>
       <a href="mailto:{{ . }}" class="btn btn-primary">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
         {{ . }}

@@ -299,6 +299,22 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ── DARK MODE ── */
+[data-theme="dark"] .page-content h2::before { background: rgba(255,255,255,0.1); }
+[data-theme="dark"] .page-content h2::after { background: linear-gradient(to right, rgba(255,255,255,0.1), transparent) !important; }
+[data-theme="dark"] .ueber-lead { color: rgba(213,205,192,0.75); }
+[data-theme="dark"] .ueber-history p { color: rgba(213,205,192,0.75); }
+[data-theme="dark"] .ueber-history p::before { background: var(--cream); }
+[data-theme="dark"] .ueber-section-header::before { background: rgba(255,255,255,0.1); }
+[data-theme="dark"] .ueber-section-header::after { background: linear-gradient(to right, rgba(255,255,255,0.1), transparent); }
+[data-theme="dark"] .leader-grid-v2 { background: rgba(255,255,255,0.05); }
+[data-theme="dark"] .leader-card-v2:hover { background: rgba(255,255,255,0.04); }
+[data-theme="dark"] .leader-card-v2:nth-child(4n+1) .leader-avatar-v2 { background: rgba(130,204,162,0.1); color: #82cca2; border-color: rgba(130,204,162,0.2); }
+[data-theme="dark"] .leader-card-v2:nth-child(4n+2) .leader-avatar-v2 { background: rgba(218,168,80,0.1); color: var(--amber); border-color: rgba(218,168,80,0.2); }
+[data-theme="dark"] .leader-card-v2:nth-child(4n+3) .leader-avatar-v2 { background: rgba(138,184,146,0.1); color: var(--sage); border-color: rgba(138,184,146,0.2); }
+[data-theme="dark"] .leader-card-v2:nth-child(4n+4) .leader-avatar-v2 { background: rgba(228,131,78,0.1); color: #e4834e; border-color: rgba(228,131,78,0.18); }
+[data-theme="dark"] .page-content img { box-shadow: 0 8px 32px rgba(0,0,0,0.25); border-color: rgba(255,255,255,0.06); }
 </style>
 
 <section class="page-single">

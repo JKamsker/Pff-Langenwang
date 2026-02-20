@@ -405,6 +405,23 @@
 @media (max-width: 400px) {
   .sched-grid-v2 { grid-template-columns: 1fr; }
 }
+
+/* ── DARK MODE ── */
+[data-theme="dark"] .termine-section-header::before { background: rgba(255,255,255,0.1); }
+[data-theme="dark"] .termine-section-header::after { background: linear-gradient(to right, rgba(255,255,255,0.1), transparent); }
+[data-theme="dark"] .termine-event-list { border-color: rgba(255,255,255,0.06); }
+[data-theme="dark"] .termine-event-item { border-bottom-color: rgba(255,255,255,0.05); }
+[data-theme="dark"] .termine-event-item:hover { background: rgba(255,255,255,0.03); }
+[data-theme="dark"] .termine-event-subtitle { color: rgba(213,205,192,0.55); }
+[data-theme="dark"] .termine-empty { color: rgba(213,205,192,0.45); background: rgba(255,255,255,0.03); border-color: rgba(255,255,255,0.08); }
+[data-theme="dark"] .sched-grid-v2 { background: rgba(255,255,255,0.05); }
+[data-theme="dark"] .sched-card-v2:hover { background: rgba(255,255,255,0.04); }
+[data-theme="dark"] .sched-card-v2__number { color: hsl(var(--sched-hue,145), 30%, 25%); }
+[data-theme="dark"] .sched-card-v2:hover .sched-card-v2__number { color: hsl(var(--sched-hue,145), 30%, 30%); }
+[data-theme="dark"] .sched-card-v2__stufe { color: hsl(var(--sched-hue,145), 45%, 65%); }
+[data-theme="dark"] .sched-card-v2__day { color: rgba(213,205,192,0.55); }
+[data-theme="dark"] .sched-card-v2__badge { color: hsl(var(--sched-hue,145), 40%, 68%); background: hsl(var(--sched-hue,145), 30%, 18%); }
+[data-theme="dark"] .termine-info-block { background: rgba(255,255,255,0.03); border-left-color: var(--sage); color: rgba(213,205,192,0.75); }
 </style>
 
 <section class="page-single">

@@ -155,7 +155,7 @@ a {
 .header-inner {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  gap: 0.25rem;
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 var(--space-md);
@@ -167,6 +167,7 @@ a {
   align-items: center;
   gap: 0.75rem;
   z-index: 101;
+  margin-right: auto;
 }
 
 .brand-icon {
@@ -2175,4 +2176,323 @@ a {
   opacity: 0.12;
   mix-blend-mode: luminosity;
   pointer-events: none;
+}
+
+/* ============================================================
+   THEME TOGGLE BUTTON
+   ============================================================ */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+  z-index: 101;
+}
+
+.theme-toggle {
+  position: relative;
+  background: none;
+  border: 1px solid rgba(27, 58, 45, 0.12);
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 0;
+  color: var(--bark);
+  transition: background 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(27, 58, 45, 0.06);
+  border-color: rgba(27, 58, 45, 0.2);
+}
+
+.theme-toggle__sun,
+.theme-toggle__moon {
+  position: absolute;
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.theme-toggle__moon {
+  opacity: 0;
+  transform: rotate(-45deg) scale(0.7);
+}
+
+/* Over dark hero: light toggle */
+.site-header:not(.is-scrolled) .theme-toggle {
+  color: rgba(246, 241, 234, 0.8);
+  border-color: rgba(246, 241, 234, 0.2);
+}
+
+.site-header:not(.is-scrolled) .theme-toggle:hover {
+  background: rgba(246, 241, 234, 0.08);
+  border-color: rgba(246, 241, 234, 0.35);
+}
+
+/* Dark theme: show moon, hide sun */
+[data-theme="dark"] .theme-toggle__sun {
+  opacity: 0;
+  transform: rotate(45deg) scale(0.7);
+}
+
+[data-theme="dark"] .theme-toggle__moon {
+  opacity: 1;
+  transform: rotate(0) scale(1);
+}
+
+/* ============================================================
+   THEME TRANSITION — only during active toggle
+   ============================================================ */
+html.theme-transition,
+html.theme-transition *,
+html.theme-transition *::before,
+html.theme-transition *::after {
+  transition: background-color 0.35s ease,
+              color 0.35s ease,
+              border-color 0.35s ease,
+              box-shadow 0.35s ease !important;
+  transition-delay: 0s !important;
+}
+
+/* ============================================================
+   DARK MODE — "Forest at Twilight"
+   ============================================================
+   Warm, atmospheric dark theme that preserves
+   the nature-editorial character.
+   ============================================================ */
+[data-theme="dark"] {
+  --cream: #151419;
+  --white: #1c1b24;
+  --parchment: #21202b;
+  --bark: #d5cdc0;
+  --sage: #8ab892;
+  --amber: #daa850;
+}
+
+/* ---- Dark-background sections: restore light text ---- */
+/* These sections use --cream as text color on --forest backgrounds.
+   Since --cream is now dark, we must override text back to light. */
+[data-theme="dark"] .hero,
+[data-theme="dark"] .page-hero,
+[data-theme="dark"] .cta-block,
+[data-theme="dark"] .visual-card,
+[data-theme="dark"] .site-footer,
+[data-theme="dark"] .vsh,
+[data-theme="dark"] .vsh-label,
+[data-theme="dark"] .vsh-panel__body,
+[data-theme="dark"] .venue-hero-content,
+[data-theme="dark"] .venue-cta-block {
+  color: #e0d8cc;
+}
+
+[data-theme="dark"] .page-title,
+[data-theme="dark"] .hero-title,
+[data-theme="dark"] .cta-title,
+[data-theme="dark"] .venue-hero-title,
+[data-theme="dark"] .venue-cta-block .venue-cta-title,
+[data-theme="dark"] .vsh-label__title,
+[data-theme="dark"] .vsh-panel__name,
+[data-theme="dark"] .footer-brand {
+  color: #e8e2d8;
+}
+
+[data-theme="dark"] .hero-topo {
+  color: #e0d8cc;
+}
+
+/* ---- Scrolled header ---- */
+[data-theme="dark"] .site-header.is-scrolled {
+  background: rgba(21, 20, 25, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.04);
+}
+
+/* ---- Brand (scrolled state) ---- */
+[data-theme="dark"] .site-header.is-scrolled .brand-icon,
+[data-theme="dark"] .site-header.is-scrolled .brand-text {
+  color: #82cca2;
+}
+
+/* ---- Nav links (scrolled) ---- */
+[data-theme="dark"] .nav-link:hover,
+[data-theme="dark"] .nav-link.is-active {
+  background: rgba(255, 255, 255, 0.06);
+  color: #82cca2;
+}
+
+/* ---- Theme toggle (scrolled, dark mode) ---- */
+[data-theme="dark"] .site-header.is-scrolled .theme-toggle {
+  color: var(--bark);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+[data-theme="dark"] .site-header.is-scrolled .theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.18);
+}
+
+/* ---- Hamburger (scrolled, dark) ---- */
+[data-theme="dark"] .site-header.is-scrolled .hamburger span {
+  background: var(--bark);
+}
+
+/* ---- Heading colors (forest → brighter green on dark) ---- */
+[data-theme="dark"] .section-title,
+[data-theme="dark"] .facility-name,
+[data-theme="dark"] .card-title,
+[data-theme="dark"] .venue-card-title,
+[data-theme="dark"] .venue-feature-name,
+[data-theme="dark"] .page-content h2,
+[data-theme="dark"] .page-content h3,
+[data-theme="dark"] .venue-intro-text strong,
+[data-theme="dark"] .contact-address-hero__name {
+  color: #82cca2;
+}
+
+/* ---- Muted text (was hardcoded rgba(61,46,30,...)) ---- */
+[data-theme="dark"] .section-text,
+[data-theme="dark"] .stufe-desc,
+[data-theme="dark"] .facility-desc,
+[data-theme="dark"] .venue-card-desc,
+[data-theme="dark"] .venue-feature-desc,
+[data-theme="dark"] .venue-intro-text,
+[data-theme="dark"] .page-content p,
+[data-theme="dark"] .page-content li,
+[data-theme="dark"] .card-subtitle,
+[data-theme="dark"] .contact-address-hero__street,
+[data-theme="dark"] .huetten-intro__text p,
+[data-theme="dark"] .history-entry__text,
+[data-theme="dark"] .dsgvo-info-card p,
+[data-theme="dark"] .dsgvo-info-card address {
+  color: rgba(213, 205, 192, 0.72);
+}
+
+/* ---- Link / accent text (was var(--forest-mid)) ---- */
+[data-theme="dark"] .link-arrow,
+[data-theme="dark"] .page-content a,
+[data-theme="dark"] .venue-card-link,
+[data-theme="dark"] .contact-address-hero__maps,
+[data-theme="dark"] .dsgvo-toc__list a,
+[data-theme="dark"] .facility-icon {
+  color: #5eaa82;
+}
+
+[data-theme="dark"] .page-content a {
+  text-decoration-color: rgba(94, 170, 130, 0.3);
+}
+
+[data-theme="dark"] .page-content a:hover {
+  text-decoration-color: #5eaa82;
+}
+
+/* ---- Subtle borders (was hardcoded rgba(27,58,45,0.08)) ---- */
+[data-theme="dark"] .facility-card,
+[data-theme="dark"] .card,
+[data-theme="dark"] .contact-card,
+[data-theme="dark"] .leader-card,
+[data-theme="dark"] .venue-card,
+[data-theme="dark"] .venue-feature,
+[data-theme="dark"] .venue-gallery-item,
+[data-theme="dark"] .sched-card,
+[data-theme="dark"] .schedule-table,
+[data-theme="dark"] .contact-address-hero,
+[data-theme="dark"] .dsgvo-toc,
+[data-theme="dark"] .dsgvo-info-card {
+  border-color: rgba(255, 255, 255, 0.06);
+}
+
+/* ---- Card hover shadows ---- */
+[data-theme="dark"] .facility-card:hover,
+[data-theme="dark"] .card:hover,
+[data-theme="dark"] .contact-card:hover,
+[data-theme="dark"] .leader-card:hover,
+[data-theme="dark"] .venue-card:hover,
+[data-theme="dark"] .venue-feature:hover,
+[data-theme="dark"] .stufe-card:hover,
+[data-theme="dark"] .sched-card:hover,
+[data-theme="dark"] .contact-address-hero:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ---- Icon backgrounds ---- */
+[data-theme="dark"] .venue-feature-icon,
+[data-theme="dark"] .contact-address-hero__icon {
+  background: rgba(130, 204, 162, 0.1);
+  color: #82cca2;
+}
+
+/* ---- Leader avatar ---- */
+[data-theme="dark"] .leader-card .leader-avatar {
+  background: rgba(130, 204, 162, 0.1);
+  color: #82cca2;
+}
+
+[data-theme="dark"] .leader-card:hover .leader-avatar {
+  background: rgba(218, 168, 80, 0.12);
+  color: var(--amber);
+}
+
+/* ---- Schedule badges ---- */
+[data-theme="dark"] .sched-card__badge {
+  background: rgba(255, 255, 255, 0.06);
+  color: #5eaa82;
+}
+
+/* ---- Table ---- */
+[data-theme="dark"] .schedule-table td {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .schedule-table tr:hover td {
+  background: rgba(255, 255, 255, 0.03);
+}
+
+/* ---- Huetten intro strip ---- */
+[data-theme="dark"] .huetten-intro {
+  border-color: rgba(255, 255, 255, 0.05);
+}
+
+/* ---- History timeline dots ---- */
+[data-theme="dark"] .history-entry::before {
+  border-color: #151419;
+}
+
+/* ---- Stufe card name color on dark ---- */
+[data-theme="dark"] .stufe-name {
+  filter: brightness(1.3) saturate(0.85);
+}
+
+[data-theme="dark"] .stufe-color {
+  filter: brightness(1.2);
+}
+
+/* ---- Mobile nav background ---- */
+@media (max-width: 768px) {
+  [data-theme="dark"] .site-nav {
+    background: var(--cream);
+  }
+
+  [data-theme="dark"] .nav-toggle[aria-expanded="true"] .hamburger span {
+    background: var(--bark);
+  }
+}
+
+/* ---- Card arrow ---- */
+[data-theme="dark"] .card-arrow {
+  color: var(--amber);
+}
+
+/* ---- Dsgvo info card ---- */
+[data-theme="dark"] .dsgvo-info-card {
+  background: var(--parchment);
+}
+
+/* ---- Page content images ---- */
+[data-theme="dark"] .page-content img {
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+  border-color: rgba(255, 255, 255, 0.06);
 }
