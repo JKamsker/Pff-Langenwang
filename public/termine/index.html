@@ -1,16 +1,742 @@
-<!doctype html><html lang=de-AT><head><meta charset=utf-8><meta name=viewport content="width=device-width,initial-scale=1"><title>Termine & Heimstunden | Pfadfinder Langenwang</title><meta name=description content="Offizielle Seite der Pfadfinder und Pfadfinderinnen Langenwang"><link rel=preconnect href=https://fonts.googleapis.com><link rel=preconnect href=https://fonts.gstatic.com crossorigin><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap" rel=stylesheet><link rel=stylesheet href=/css/style.css></head><body><header class=site-header id=site-header><div class=header-inner><a href=/ class=site-brand><svg class="brand-icon" viewBox="0 0 40 40" fill="none"><path d="M20 2 4 38H36z" stroke="currentColor" stroke-width="2.5" fill="none"/><path d="M20 12 12 32H28z" stroke="currentColor" stroke-width="1.5" fill="none" opacity=".4"/><circle cx="20" cy="20" r="3" fill="currentColor" opacity=".6"/></svg>
-<span class=brand-text><strong>Pfadfinder</strong> Langenwang
-</span></a><button class=nav-toggle id=nav-toggle aria-label="Menu oeffnen" aria-expanded=false>
-<span class=hamburger><span></span>
-<span></span>
-<span></span></span></button><nav class=site-nav id=site-nav role=navigation aria-label=Hauptnavigation><ul class=nav-list><li class=nav-item><a href=/termine/ class=nav-link>Termine</a></li><li class=nav-item><a href=/ueber-uns/ class=nav-link>Über uns</a></li><li class=nav-item><a href=/huetten/ class=nav-link>Hütten & Heime</a></li><li class=nav-item><a href=/kontakt/ class=nav-link>Kontakt</a></li></ul></nav></div></header><main><style>.termine-section{margin-top:var(--space-lg)}.termine-section-header{display:flex;align-items:center;gap:1rem;margin-bottom:var(--space-md)}.termine-section-header::before{content:'';display:block;width:2rem;height:1px;background:rgba(27,58,45,.18);flex-shrink:0}.termine-section-header::after{content:'';flex:1;height:1px;background:linear-gradient(to right,rgba(27,58,45,.18),transparent)}.termine-section-title{font-family:var(--font-display);font-size:.78rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--sage);white-space:nowrap;display:flex;align-items:center;gap:.45rem}.termine-section-icon{width:15px;height:15px;flex-shrink:0}.termine-event-list{display:flex;flex-direction:column;border-radius:var(--radius-md);overflow:hidden;border:1px solid rgba(27,58,45,.1)}.termine-event-item{display:flex;align-items:stretch;background:var(--white);border-bottom:1px solid rgba(27,58,45,7%);text-decoration:none;color:inherit;transition:background .2s ease}.termine-event-item:last-child{border-bottom:none}.termine-event-item:hover{background:rgba(107,143,113,5%)}.termine-event-item:hover .termine-event-arrow{transform:translateX(5px);opacity:1}.termine-event-date-block{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--forest);color:var(--cream);padding:1.25rem 1.5rem;min-width:88px;text-align:center;flex-shrink:0;position:relative}.termine-event-date-block::after{content:'';position:absolute;right:0;top:20%;bottom:20%;width:1px;background:rgba(246,241,234,8%)}.termine-event-day{font-family:var(--font-display);font-size:2.1rem;font-weight:300;font-variation-settings:"opsz" 48;line-height:1;letter-spacing:-.02em}.termine-event-month{font-size:.62rem;font-weight:700;letter-spacing:.16em;text-transform:uppercase;color:rgba(246,241,234,.5);margin-top:.25rem}.termine-event-body{padding:1.25rem 1.5rem;flex:1;display:flex;flex-direction:column;justify-content:center}.termine-event-tag{font-size:.62rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);margin-bottom:.3rem}.termine-event-title{font-family:var(--font-display);font-size:1.1rem;font-weight:500;font-variation-settings:"opsz" 24;color:var(--bark);line-height:1.3}.termine-event-subtitle{font-size:.875rem;color:rgba(61,46,30,.5);margin-top:.2rem;line-height:1.5}.termine-event-arrow{display:flex;align-items:center;padding:0 1.5rem 0 .5rem;color:var(--sage);opacity:.4;transition:transform .2s ease,opacity .2s ease;font-size:1.1rem;flex-shrink:0}.termine-empty{padding:var(--space-md);text-align:center;color:rgba(61,46,30,.4);font-size:.9rem;background:rgba(107,143,113,5%);border-radius:var(--radius-md);border:1px dashed rgba(107,143,113,.22);font-style:italic}.heimstunden-callout{position:relative;background:var(--forest);border-radius:var(--radius-md);padding:var(--space-md)var(--space-md)var(--space-md)5.5rem;color:var(--cream);overflow:hidden}.heimstunden-callout::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 70% 100% at -10% 60%,rgba(107,143,113,.22) 0%,transparent 65%),radial-gradient(ellipse 40% 60% at 100% 0%,rgba(196,146,58,8%) 0%,transparent 60%);pointer-events:none}.heimstunden-callout::after{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(246,241,234,7%) 1px,transparent 1px);background-size:18px 18px;pointer-events:none}.heimstunden-callout-icon{position:absolute;left:var(--space-md);top:50%;transform:translateY(-50%);width:2.25rem;height:2.25rem;color:var(--sage);opacity:.65;z-index:1}.heimstunden-callout-content{position:relative;z-index:1}.heimstunden-callout-content p{font-size:.925rem;color:rgba(246,241,234,.78);line-height:1.8;margin-bottom:0}.heimstunden-callout-content strong{color:var(--cream);font-weight:600}.heimstunden-callout-content em{color:rgba(196,146,58,.95);font-style:italic;font-family:var(--font-display);font-size:1.05em;font-variation-settings:"opsz" 20}.sched-grid-v2{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(27,58,45,.1);border-radius:var(--radius-md);overflow:hidden}.sched-card-v2{background:var(--white);padding:1.5rem;position:relative;transition:background .25s ease;overflow:hidden}.sched-card-v2:hover{background:rgba(246,241,234,.7)}.sched-card-v2__top-bar{position:absolute;top:0;left:0;right:0;height:3px;background:hsl(var(--sched-hue,145),42%,42%)}.sched-card-v2__number{font-family:var(--font-display);font-size:3.5rem;font-weight:200;font-variation-settings:"opsz" 72;line-height:1;letter-spacing:-.03em;color:hsl(var(--sched-hue,145),40%,90%);margin-bottom:.1rem;transition:color .25s ease}.sched-card-v2:hover .sched-card-v2__number{color:hsl(var(--sched-hue,145),40%,84%)}.sched-card-v2__stufe{font-family:var(--font-display);font-size:1rem;font-weight:600;font-variation-settings:"opsz" 24;color:hsl(var(--sched-hue,145),38%,28%);margin-bottom:.3rem;line-height:1.2}.sched-card-v2__day{font-size:.78rem;font-weight:600;color:rgba(61,46,30,.55);margin-bottom:.65rem;letter-spacing:.01em}.sched-card-v2__badges{display:flex;flex-wrap:wrap;gap:.3rem}.sched-card-v2__badge{font-size:.6rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:hsl(var(--sched-hue,145),38%,35%);background:hsl(var(--sched-hue,145),42%,93%);padding:.18rem .55rem;border-radius:100px}.termine-info-block{padding:var(--space-md);background:rgba(107,143,113,7%);border-radius:var(--radius-md);border-left:3px solid var(--sage);font-size:.925rem;line-height:1.85;color:rgba(61,46,30,.8)}.termine-info-block strong{color:var(--bark);font-weight:700}.termine-cta{margin-top:var(--space-xl)}@media(max-width:768px){.sched-grid-v2{grid-template-columns:repeat(2,1fr)}.heimstunden-callout{padding:3.5rem var(--space-md)var(--space-md)}.heimstunden-callout-icon{top:var(--space-md);left:50%;transform:translateX(-50%)}.termine-event-date-block{min-width:72px;padding:1rem 1.1rem}.termine-event-day{font-size:1.7rem}}@media(max-width:540px){.sched-grid-v2{grid-template-columns:repeat(2,1fr)}.sched-card-v2__number{font-size:2.5rem}.termine-event-arrow{display:none}}@media(max-width:400px){.sched-grid-v2{grid-template-columns:1fr}}</style><section class=page-single><div class=page-hero><div class=page-hero-inner><h1 class=page-title data-animate=fade-up>Termine & Heimstunden</h1><p class=page-subtitle data-animate=fade-up data-delay=1>Was bei uns los ist</p></div></div><div class="page-content content-width"><div data-animate=fade-up data-delay=2><h2 id=termine--veranstaltungen>Termine & Veranstaltungen</h2><p>Hier findest du unsere kommenden Termine und Veranstaltungen. Schau regelmäßig vorbei, um auf dem Laufenden zu bleiben!</p><p><em>Termine werden laufend aktualisiert.</em></p></div><div class=termine-section data-animate=fade-up><div class=termine-section-header><span class=termine-section-title><svg class="termine-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-Kommende Veranstaltungen</span></div><div class=termine-event-list><a href=/termine/kindermaskenball-2026/ class=termine-event-item><div class=termine-event-date-block><div class=termine-event-day>15</div><div class=termine-event-month>Feb '26</div></div><div class=termine-event-body><div class=termine-event-tag>Veranstaltung</div><div class=termine-event-title>Kindermaskenball 2026</div><div class=termine-event-subtitle>Sonntag, 15.02.2026 · 14:00 Uhr · Volkshaus Langenwang</div></div><div class=termine-event-arrow>→</div></a></div></div><div class=termine-section data-animate=fade-up><div class=termine-section-header><span class=termine-section-title><svg class="termine-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
-Heimstunden</span></div><div class=heimstunden-callout><svg class="heimstunden-callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg><div class=heimstunden-callout-content><p>Unsere Heimstunden finden wöchentlich am <strong>Samstag</strong> statt und sind das Herzstück unserer Pfadfinderarbeit. Hier lernen die Kinder und Jugendlichen das Binden von Knoten, den Umgang mit Kompass und Karte, spielen gemeinsam und haben Spaß.</p><p><em>Willkommen im Abenteuer…</em></p></div></div></div><div class=termine-section data-animate=fade-up><div class=termine-section-header><span class=termine-section-title><svg class="termine-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-Zeiten & Gruppen</span></div><div class=sched-grid-v2><div class=sched-card-v2 data-animate=fade-up data-delay=1 style=--sched-hue:35><div class=sched-card-v2__top-bar></div><div class=sched-card-v2__number>01</div><div class=sched-card-v2__stufe>Wichtel</div><div class=sched-card-v2__day>Samstag, 14:00 Uhr</div><div class=sched-card-v2__badges><span class=sched-card-v2__badge>Mädchen</span>
-<span class=sched-card-v2__badge>6 – 10 Jahre</span></div></div><div class=sched-card-v2 data-animate=fade-up data-delay=2 style=--sched-hue:35><div class=sched-card-v2__top-bar></div><div class=sched-card-v2__number>02</div><div class=sched-card-v2__stufe>Wölflinge</div><div class=sched-card-v2__day>Samstag, 14:00 Uhr</div><div class=sched-card-v2__badges><span class=sched-card-v2__badge>Buben</span>
-<span class=sched-card-v2__badge>6 – 10 Jahre</span></div></div><div class=sched-card-v2 data-animate=fade-up data-delay=3 style=--sched-hue:145><div class=sched-card-v2__top-bar></div><div class=sched-card-v2__number>03</div><div class=sched-card-v2__stufe>Guides</div><div class=sched-card-v2__day>Samstag, 15:00 Uhr</div><div class=sched-card-v2__badges><span class=sched-card-v2__badge>Mädchen</span>
-<span class=sched-card-v2__badge>10 – 14 Jahre</span></div></div><div class=sched-card-v2 data-animate=fade-up data-delay=4 style=--sched-hue:145><div class=sched-card-v2__top-bar></div><div class=sched-card-v2__number>04</div><div class=sched-card-v2__stufe>Späher</div><div class=sched-card-v2__day>Samstag, 15:00 Uhr</div><div class=sched-card-v2__badges><span class=sched-card-v2__badge>Buben</span>
-<span class=sched-card-v2__badge>10 – 14 Jahre</span></div></div><div class=sched-card-v2 data-animate=fade-up data-delay=5 style=--sched-hue:200><div class=sched-card-v2__top-bar></div><div class=sched-card-v2__number>05</div><div class=sched-card-v2__stufe>Caravelles</div><div class=sched-card-v2__day>Samstag, nach Absprache</div><div class=sched-card-v2__badges><span class=sched-card-v2__badge>Mädchen</span>
-<span class=sched-card-v2__badge>ab 14 Jahre</span></div></div><div class=sched-card-v2 data-animate=fade-up data-delay=6 style=--sched-hue:200><div class=sched-card-v2__top-bar></div><div class=sched-card-v2__number>06</div><div class=sched-card-v2__stufe>Explorer</div><div class=sched-card-v2__day>Samstag, nach Absprache</div><div class=sched-card-v2__badges><span class=sched-card-v2__badge>Buben</span>
-<span class=sched-card-v2__badge>ab 14 Jahre</span></div></div></div></div><div class=termine-info-block data-animate=fade-up>Für Information stehen wir Dir gerne zur Verfügung! Jeden <strong>Dienstag ab 19:00 Uhr</strong> im Pfadfinderheim und in den Heimstunden. Telefon: <strong>+43 664 9373662</strong> oder <strong>+43 664 5363953</strong>.</div><div class=termine-cta data-animate=fade-up><div class=venue-cta-block><div class=venue-cta-bg></div><div class=venue-cta-inner><h2 class=venue-cta-title>Noch Fragen?</h2><p class=venue-cta-text>Jeden Dienstag ab 19:00 Uhr im Pfadfinderheim oder einfach anrufen.</p><a href=/kontakt/ class="btn btn-light venue-cta-btn"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94.0 01-2.06.0L2 7"/></svg>
-Kontakt aufnehmen</a></div></div></div></div></section></main><footer class=site-footer><div class=footer-inner><div class=footer-grid><div class="footer-col footer-brand-col"><a href=/ class=footer-brand><strong>Pfadfinder Langenwang</strong></a><p class=footer-motto>…mehr erleben</p><p class=footer-address>Grazerstraße 26, 8665 Langenwang</p></div><div class=footer-col><h4 class=footer-heading>Navigation</h4><ul class=footer-links><li><a href=/>Startseite</a></li><li><a href=/termine/>Termine & Heimstunden</a></li><li><a href=/ueber-uns/>Über uns</a></li><li><a href=/huetten/>Hütten & Heime</a></li><li><a href=/kontakt/>Kontakt</a></li><li><a href=/datenschutzerklaerung/>Datenschutz</a></li></ul></div><div class=footer-col><h4 class=footer-heading>Kontakt</h4><ul class=footer-links><li><a href=mailto:pfadfinder.langenwang@aon.at>pfadfinder.langenwang@aon.at</a></li><li><a href=tel:+43%20664%209373662>+43 664 9373662</a></li></ul></div></div><div class=footer-bottom><p>&copy; 2026 Pfadfinder Langenwang &mdash; alle Rechte vorbehalten</p></div></div></footer><script src=/js/main.js defer></script></body></html>
+<!DOCTYPE html>
+<html lang="de-AT">
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Termine &amp; Heimstunden | Pfadfinder Langenwang</title>
+<meta name="description" content="Offizielle Seite der Pfadfinder und Pfadfinderinnen Langenwang">
+
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..900;1,9..144,300..900&family=Source+Sans+3:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body><header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="/" class="site-brand">
+      <svg class="brand-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20 2 L4 38 H36 Z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+        <path d="M20 12 L12 32 H28 Z" stroke="currentColor" stroke-width="1.5" fill="none" opacity="0.4"/>
+        <circle cx="20" cy="20" r="3" fill="currentColor" opacity="0.6"/>
+      </svg>
+      <span class="brand-text">
+        <strong>Pfadfinder</strong> Langenwang
+      </span>
+    </a>
+
+    <button class="nav-toggle" id="nav-toggle" aria-label="Menu oeffnen" aria-expanded="false">
+      <span class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </span>
+    </button>
+
+    <nav class="site-nav" id="site-nav" role="navigation" aria-label="Hauptnavigation">
+      <ul class="nav-list">
+        
+        <li class="nav-item">
+          <a href="/termine/" class="nav-link">
+            Termine
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/ueber-uns/" class="nav-link">
+            Über uns
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/huetten/" class="nav-link">
+            Hütten &amp; Heime
+          </a>
+        </li>
+        
+        <li class="nav-item">
+          <a href="/kontakt/" class="nav-link">
+            Kontakt
+          </a>
+        </li>
+        
+      </ul>
+    </nav>
+  </div>
+</header>
+<main>
+<style>
+ 
+
+ 
+.termine-section {
+  margin-top: var(--space-lg);
+}
+
+ 
+.termine-section-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: var(--space-md);
+}
+
+.termine-section-header::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 1px;
+  background: rgba(27, 58, 45, 0.18);
+  flex-shrink: 0;
+}
+
+.termine-section-header::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(27, 58, 45, 0.18), transparent);
+}
+
+.termine-section-title {
+  font-family: var(--font-display);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--sage);
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.termine-section-icon {
+  width: 15px;
+  height: 15px;
+  flex-shrink: 0;
+}
+
+ 
+.termine-event-list {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  border: 1px solid rgba(27, 58, 45, 0.1);
+}
+
+.termine-event-item {
+  display: flex;
+  align-items: stretch;
+  background: var(--white);
+  border-bottom: 1px solid rgba(27, 58, 45, 0.07);
+  text-decoration: none;
+  color: inherit;
+  transition: background 0.2s ease;
+}
+
+.termine-event-item:last-child {
+  border-bottom: none;
+}
+
+.termine-event-item:hover {
+  background: rgba(107, 143, 113, 0.05);
+}
+
+.termine-event-item:hover .termine-event-arrow {
+  transform: translateX(5px);
+  opacity: 1;
+}
+
+.termine-event-date-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--forest);
+  color: var(--cream);
+  padding: 1.25rem 1.5rem;
+  min-width: 88px;
+  text-align: center;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.termine-event-date-block::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  top: 20%;
+  bottom: 20%;
+  width: 1px;
+  background: rgba(246, 241, 234, 0.08);
+}
+
+.termine-event-day {
+  font-family: var(--font-display);
+  font-size: 2.1rem;
+  font-weight: 300;
+  font-variation-settings: "opsz" 48;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.termine-event-month {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(246, 241, 234, 0.5);
+  margin-top: 0.25rem;
+}
+
+.termine-event-body {
+  padding: 1.25rem 1.5rem;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.termine-event-tag {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--amber);
+  margin-bottom: 0.3rem;
+}
+
+.termine-event-title {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-variation-settings: "opsz" 24;
+  color: var(--bark);
+  line-height: 1.3;
+}
+
+.termine-event-subtitle {
+  font-size: 0.875rem;
+  color: rgba(61, 46, 30, 0.5);
+  margin-top: 0.2rem;
+  line-height: 1.5;
+}
+
+.termine-event-arrow {
+  display: flex;
+  align-items: center;
+  padding: 0 1.5rem 0 0.5rem;
+  color: var(--sage);
+  opacity: 0.4;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  font-size: 1.1rem;
+  flex-shrink: 0;
+}
+
+.termine-empty {
+  padding: var(--space-md);
+  text-align: center;
+  color: rgba(61, 46, 30, 0.4);
+  font-size: 0.9rem;
+  background: rgba(107, 143, 113, 0.05);
+  border-radius: var(--radius-md);
+  border: 1px dashed rgba(107, 143, 113, 0.22);
+  font-style: italic;
+}
+
+ 
+.heimstunden-callout {
+  position: relative;
+  background: var(--forest);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-md) var(--space-md) 5.5rem;
+  color: var(--cream);
+  overflow: hidden;
+}
+
+.heimstunden-callout::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(ellipse 70% 100% at -10% 60%, rgba(107, 143, 113, 0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 40% 60% at 100% 0%, rgba(196, 146, 58, 0.08) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+ 
+.heimstunden-callout::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(246,241,234,0.07) 1px, transparent 1px);
+  background-size: 18px 18px;
+  pointer-events: none;
+}
+
+.heimstunden-callout-icon {
+  position: absolute;
+  left: var(--space-md);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 2.25rem;
+  height: 2.25rem;
+  color: var(--sage);
+  opacity: 0.65;
+  z-index: 1;
+}
+
+.heimstunden-callout-content {
+  position: relative;
+  z-index: 1;
+}
+
+.heimstunden-callout-content p {
+  font-size: 0.925rem;
+  color: rgba(246, 241, 234, 0.78);
+  line-height: 1.8;
+  margin-bottom: 0;
+}
+
+.heimstunden-callout-content strong {
+  color: var(--cream);
+  font-weight: 600;
+}
+
+.heimstunden-callout-content em {
+  color: rgba(196, 146, 58, 0.95);
+  font-style: italic;
+  font-family: var(--font-display);
+  font-size: 1.05em;
+  font-variation-settings: "opsz" 20;
+}
+
+ 
+.sched-grid-v2 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: rgba(27, 58, 45, 0.1);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+}
+
+.sched-card-v2 {
+  background: var(--white);
+  padding: 1.5rem;
+  position: relative;
+  transition: background 0.25s ease;
+  overflow: hidden;
+}
+
+.sched-card-v2:hover {
+  background: rgba(246, 241, 234, 0.7);
+}
+
+.sched-card-v2__top-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: hsl(var(--sched-hue, 145), 42%, 42%);
+}
+
+.sched-card-v2__number {
+  font-family: var(--font-display);
+  font-size: 3.5rem;
+  font-weight: 200;
+  font-variation-settings: "opsz" 72;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: hsl(var(--sched-hue, 145), 40%, 90%);
+  margin-bottom: 0.1rem;
+  transition: color 0.25s ease;
+}
+
+.sched-card-v2:hover .sched-card-v2__number {
+  color: hsl(var(--sched-hue, 145), 40%, 84%);
+}
+
+.sched-card-v2__stufe {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  font-weight: 600;
+  font-variation-settings: "opsz" 24;
+  color: hsl(var(--sched-hue, 145), 38%, 28%);
+  margin-bottom: 0.3rem;
+  line-height: 1.2;
+}
+
+.sched-card-v2__day {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: rgba(61, 46, 30, 0.55);
+  margin-bottom: 0.65rem;
+  letter-spacing: 0.01em;
+}
+
+.sched-card-v2__badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem;
+}
+
+.sched-card-v2__badge {
+  font-size: 0.6rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: hsl(var(--sched-hue, 145), 38%, 35%);
+  background: hsl(var(--sched-hue, 145), 42%, 93%);
+  padding: 0.18rem 0.55rem;
+  border-radius: 100px;
+}
+
+ 
+.sched-gender-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  padding: 0 0.1rem;
+}
+
+.sched-gender-label--maedchen {
+  color: #b05a7a;
+  margin-top: 0;
+}
+
+.sched-gender-label--buben {
+  color: #3d72a4;
+  margin-top: var(--space-md);
+}
+
+ 
+.termine-info-block {
+  padding: var(--space-md);
+  background: rgba(107, 143, 113, 0.07);
+  border-radius: var(--radius-md);
+  border-left: 3px solid var(--sage);
+  font-size: 0.925rem;
+  line-height: 1.85;
+  color: rgba(61, 46, 30, 0.8);
+}
+
+.termine-info-block strong {
+  color: var(--bark);
+  font-weight: 700;
+}
+
+ 
+.termine-cta {
+  margin-top: var(--space-xl);
+}
+
+ 
+@media (max-width: 768px) {
+  .sched-grid-v2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .heimstunden-callout {
+    padding: 3.5rem var(--space-md) var(--space-md);
+  }
+  .heimstunden-callout-icon {
+    top: var(--space-md);
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .termine-event-date-block {
+    min-width: 72px;
+    padding: 1rem 1.1rem;
+  }
+  .termine-event-day { font-size: 1.7rem; }
+}
+
+@media (max-width: 540px) {
+  .sched-grid-v2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sched-card-v2__number { font-size: 2.5rem; }
+  .termine-event-arrow { display: none; }
+}
+
+@media (max-width: 400px) {
+  .sched-grid-v2 { grid-template-columns: 1fr; }
+}
+</style>
+
+<section class="page-single">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-title" data-animate="fade-up">Termine &amp; Heimstunden</h1>
+      
+      <p class="page-subtitle" data-animate="fade-up" data-delay="1">Was bei uns los ist</p>
+      
+    </div>
+  </div>
+
+  <div class="page-content content-width">
+
+    
+    
+    <div data-animate="fade-up" data-delay="2"><h2 id="termine--veranstaltungen">Termine &amp; Veranstaltungen</h2>
+<p>Hier findest du unsere kommenden Termine und Veranstaltungen. Schau regelmäßig vorbei, um auf dem Laufenden zu bleiben!</p>
+<p><em>Termine werden laufend aktualisiert.</em></p>
+</div>
+    
+
+    
+    <div class="termine-section" data-animate="fade-up">
+      <div class="termine-section-header">
+        <span class="termine-section-title">
+          <svg class="termine-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+          </svg>
+          Kommende Veranstaltungen
+        </span>
+      </div>
+
+      
+      <div class="termine-event-list">
+        
+        <a href="/termine/kindermaskenball-2026/" class="termine-event-item">
+          <div class="termine-event-date-block">
+            <div class="termine-event-day">15</div>
+            <div class="termine-event-month">Feb &#39;26</div>
+          </div>
+          <div class="termine-event-body">
+            <div class="termine-event-tag">Veranstaltung</div>
+            <div class="termine-event-title">Kindermaskenball 2026</div>
+            
+            <div class="termine-event-subtitle">Sonntag, 15.02.2026 · 14:00 Uhr · Volkshaus Langenwang</div>
+            
+          </div>
+          <div class="termine-event-arrow">→</div>
+        </a>
+        
+      </div>
+      
+    </div>
+
+    
+    
+    <div class="termine-section" data-animate="fade-up">
+      <div class="termine-section-header">
+        <span class="termine-section-title">
+          <svg class="termine-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+          Heimstunden
+        </span>
+      </div>
+      <div class="heimstunden-callout">
+        <svg class="heimstunden-callout-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+          <circle cx="9" cy="7" r="4"/>
+          <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+          <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+        </svg>
+        <div class="heimstunden-callout-content">
+          <p>Unsere Heimstunden finden wöchentlich am <strong>Samstag</strong> statt und sind das Herzstück unserer Pfadfinderarbeit. Hier lernen die Kinder und Jugendlichen das Binden von Knoten, den Umgang mit Kompass und Karte, spielen gemeinsam und haben Spaß.</p>
+<p><em>Willkommen im Abenteuer…</em></p>
+
+        </div>
+      </div>
+    </div>
+    
+
+    
+    
+    
+    
+    <div class="termine-section" data-animate="fade-up">
+      <div class="termine-section-header">
+        <span class="termine-section-title">
+          <svg class="termine-section-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/>
+          </svg>
+          Zeiten &amp; Gruppen
+        </span>
+      </div>
+
+      
+      
+      <div class="sched-gender-label sched-gender-label--maedchen">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+        Mädchen
+      </div>
+      <div class="sched-grid-v2">
+        
+        
+        
+        
+        <div class="sched-card-v2" data-animate="fade-up" data-delay="1" style="--sched-hue: 35">
+          <div class="sched-card-v2__top-bar"></div>
+          <div class="sched-card-v2__number">01</div>
+          <div class="sched-card-v2__stufe">Wichtel</div>
+          <div class="sched-card-v2__day">Samstag, 14:00 Uhr</div>
+          <div class="sched-card-v2__badges">
+            <span class="sched-card-v2__badge">6 – 10 Jahre</span>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="sched-card-v2" data-animate="fade-up" data-delay="2" style="--sched-hue: 145">
+          <div class="sched-card-v2__top-bar"></div>
+          <div class="sched-card-v2__number">02</div>
+          <div class="sched-card-v2__stufe">Guides</div>
+          <div class="sched-card-v2__day">Samstag, 15:00 Uhr</div>
+          <div class="sched-card-v2__badges">
+            <span class="sched-card-v2__badge">10 – 14 Jahre</span>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="sched-card-v2" data-animate="fade-up" data-delay="3" style="--sched-hue: 200">
+          <div class="sched-card-v2__top-bar"></div>
+          <div class="sched-card-v2__number">03</div>
+          <div class="sched-card-v2__stufe">Caravelles</div>
+          <div class="sched-card-v2__day">Samstag, nach Absprache</div>
+          <div class="sched-card-v2__badges">
+            <span class="sched-card-v2__badge">ab 14 Jahre</span>
+          </div>
+        </div>
+        
+      </div>
+      
+
+      
+      
+      <div class="sched-gender-label sched-gender-label--buben">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><line x1="21" y1="3" x2="15" y2="9"/><polyline points="16 3 21 3 21 8"/></svg>
+        Buben
+      </div>
+      <div class="sched-grid-v2">
+        
+        
+        
+        
+        <div class="sched-card-v2" data-animate="fade-up" data-delay="1" style="--sched-hue: 35">
+          <div class="sched-card-v2__top-bar"></div>
+          <div class="sched-card-v2__number">01</div>
+          <div class="sched-card-v2__stufe">Wölflinge</div>
+          <div class="sched-card-v2__day">Samstag, 14:00 Uhr</div>
+          <div class="sched-card-v2__badges">
+            <span class="sched-card-v2__badge">6 – 10 Jahre</span>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="sched-card-v2" data-animate="fade-up" data-delay="2" style="--sched-hue: 145">
+          <div class="sched-card-v2__top-bar"></div>
+          <div class="sched-card-v2__number">02</div>
+          <div class="sched-card-v2__stufe">Späher</div>
+          <div class="sched-card-v2__day">Samstag, 15:00 Uhr</div>
+          <div class="sched-card-v2__badges">
+            <span class="sched-card-v2__badge">10 – 14 Jahre</span>
+          </div>
+        </div>
+        
+        
+        
+        
+        <div class="sched-card-v2" data-animate="fade-up" data-delay="3" style="--sched-hue: 200">
+          <div class="sched-card-v2__top-bar"></div>
+          <div class="sched-card-v2__number">03</div>
+          <div class="sched-card-v2__stufe">Explorer</div>
+          <div class="sched-card-v2__day">Samstag, nach Absprache</div>
+          <div class="sched-card-v2__badges">
+            <span class="sched-card-v2__badge">ab 14 Jahre</span>
+          </div>
+        </div>
+        
+      </div>
+      
+
+    </div>
+    
+
+    
+    
+    <div class="termine-info-block" data-animate="fade-up">
+      Für Information stehen wir Dir gerne zur Verfügung! <br/>Jeden <strong>Dienstag ab 19:00 Uhr</strong> im Pfadfinderheim und in den Heimstunden. <br/>Telefon: <strong>+43 664 9373662</strong> oder <strong>+43 664 5363953</strong>.
+    </div>
+    
+
+    
+    <div class="termine-cta" data-animate="fade-up">
+      <div class="venue-cta-block">
+        <div class="venue-cta-bg"></div>
+        <div class="venue-cta-inner">
+          <h2 class="venue-cta-title">Noch Fragen?</h2>
+          <p class="venue-cta-text">Jeden Dienstag ab 19:00 Uhr im Pfadfinderheim oder einfach anrufen.</p>
+          <a href="/kontakt/" class="btn btn-light venue-cta-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+  </main><footer class="site-footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-col footer-brand-col">
+        <a href="/" class="footer-brand">
+          <strong>Pfadfinder Langenwang</strong>
+        </a>
+        <p class="footer-motto">…mehr erleben</p>
+        <p class="footer-address">Grazerstraße 26, 8665 Langenwang</p>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Navigation</h4>
+        <ul class="footer-links">
+          
+          <li><a href="/">Startseite</a></li>
+          
+          <li><a href="/termine/">Termine &amp; Heimstunden</a></li>
+          
+          <li><a href="/ueber-uns/">Über uns</a></li>
+          
+          <li><a href="/huetten/">Hütten &amp; Heime</a></li>
+          
+          <li><a href="/kontakt/">Kontakt</a></li>
+          
+          <li><a href="/datenschutzerklaerung/">Datenschutz</a></li>
+          
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-heading">Kontakt</h4>
+        <ul class="footer-links">
+          <li><a href="mailto:pfadfinder.langenwang@aon.at">pfadfinder.langenwang@aon.at</a></li>
+          <li><a href="tel:&#43;43%20664%209373662">&#43;43 664 9373662</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Pfadfinder Langenwang &mdash; alle Rechte vorbehalten</p>
+    </div>
+  </div>
+</footer>
+<script src="/js/main.js" defer></script>
+</body>
+</html>

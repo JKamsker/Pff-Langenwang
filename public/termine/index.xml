@@ -1,9 +1,19 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Termine &amp; Heimstunden on Pfadfinder Langenwang</title><link>https://pfadfinder-langenwang.at/termine/</link><description>Recent content in Termine &amp; Heimstunden on Pfadfinder Langenwang</description><generator>Hugo</generator><language>de-AT</language><lastBuildDate>Sun, 15 Feb 2026 14:00:00 +0100</lastBuildDate><atom:link href="https://pfadfinder-langenwang.at/termine/index.xml" rel="self" type="application/rss+xml"/><item><title>Kindermaskenball 2026</title><link>https://pfadfinder-langenwang.at/termine/kindermaskenball-2026/</link><pubDate>Sun, 15 Feb 2026 14:00:00 +0100</pubDate><guid>https://pfadfinder-langenwang.at/termine/kindermaskenball-2026/</guid><description>&lt;p&gt;&lt;img src="https://pfadfinder-langenwang.at/images/neuigkeiten/Pfadfinder_Kinderball-Plakat.jpg" alt="Plakat: Einladung zum 69. Langenwanger Kinderball (15.02.2026, 14:00 Uhr, Volkshaus Langenwang, Eintritt 4 EUR)"&gt;&lt;/p&gt;
-&lt;h2 id="einladung-zum-69-langenwanger-kinderball"&gt;Einladung zum 69. Langenwanger Kinderball&lt;/h2&gt;
-&lt;p&gt;&lt;strong&gt;Das Fest für alle Kinder!&lt;/strong&gt; Eintritt: EUR 4,-&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Stimmung&lt;/li&gt;
-&lt;li&gt;Fröhlichkeit&lt;/li&gt;
-&lt;li&gt;lustige Spiele&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Jedes Kind erhält ein Geschenk! Verlosung von tollen Preisen!&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Termine &amp; Heimstunden on Pfadfinder Langenwang</title>
+    <link>http://localhost:1313/termine/</link>
+    <description>Recent content in Termine &amp; Heimstunden on Pfadfinder Langenwang</description>
+    <generator>Hugo</generator>
+    <language>de-AT</language>
+    <lastBuildDate>Sun, 15 Feb 2026 14:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/termine/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Kindermaskenball 2026</title>
+      <link>http://localhost:1313/termine/kindermaskenball-2026/</link>
+      <pubDate>Sun, 15 Feb 2026 14:00:00 +0100</pubDate>
+      <guid>http://localhost:1313/termine/kindermaskenball-2026/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/neuigkeiten/Pfadfinder_Kinderball-Plakat.jpg&#34; alt=&#34;Plakat: Einladung zum 69. Langenwanger Kinderball (15.02.2026, 14:00 Uhr, Volkshaus Langenwang, Eintritt 4 EUR)&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;einladung-zum-69-langenwanger-kinderball&#34;&gt;Einladung zum 69. Langenwanger Kinderball&lt;/h2&gt;&#xA;&lt;p&gt;&lt;strong&gt;Das Fest für alle Kinder!&lt;/strong&gt; Eintritt: EUR 4,-&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Stimmung&lt;/li&gt;&#xA;&lt;li&gt;Fröhlichkeit&lt;/li&gt;&#xA;&lt;li&gt;lustige Spiele&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Jedes Kind erhält ein Geschenk! Verlosung von tollen Preisen!&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

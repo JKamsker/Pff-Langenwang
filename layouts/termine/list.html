@@ -330,6 +330,29 @@
   border-radius: 100px;
 }
 
+/* ── GENDER LABELS ── */
+.sched-gender-label {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  padding: 0 0.1rem;
+}
+
+.sched-gender-label--maedchen {
+  color: #b05a7a;
+  margin-top: 0;
+}
+
+.sched-gender-label--buben {
+  color: #3d72a4;
+  margin-top: var(--space-md);
+}
+
 /* ── INFO BLOCK ── */
 .termine-info-block {
   padding: var(--space-md);
@@ -463,6 +486,8 @@
 
     {{/* ── Schedule grid ── */}}
     {{ with .Params.schedule }}
+    {{ $maedchen := where . "gender" "Mädchen" }}
+    {{ $buben    := where . "gender" "Buben" }}
     <div class="termine-section" data-animate="fade-up">
       <div class="termine-section-header">
         <span class="termine-section-title">
@@ -472,23 +497,55 @@
           Zeiten &amp; Gruppen
         </span>
       </div>
+
+      {{/* Girls */}}
+      {{ if $maedchen }}
+      <div class="sched-gender-label sched-gender-label--maedchen">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="5"/><line x1="12" y1="13" x2="12" y2="21"/><line x1="9" y1="18" x2="15" y2="18"/></svg>
+        Mädchen
+      </div>
       <div class="sched-grid-v2">
-        {{ range $i, $s := . }}
+        {{ range $i, $s := $maedchen }}
         {{ $hue := 145 }}
-        {{ if or (eq $s.stufe "Wichtel") (eq $s.stufe "Wölflinge") }}{{ $hue = 35 }}{{ end }}
-        {{ if or (eq $s.stufe "Caravelles") (eq $s.stufe "Explorer") }}{{ $hue = 200 }}{{ end }}
+        {{ if eq $s.stufe "Wichtel" }}{{ $hue = 35 }}{{ end }}
+        {{ if eq $s.stufe "Caravelles" }}{{ $hue = 200 }}{{ end }}
         <div class="sched-card-v2" data-animate="fade-up" data-delay="{{ add $i 1 }}" style="--sched-hue: {{ $hue }}">
           <div class="sched-card-v2__top-bar"></div>
           <div class="sched-card-v2__number">{{ printf "%02d" (add $i 1) }}</div>
           <div class="sched-card-v2__stufe">{{ $s.stufe }}</div>
           <div class="sched-card-v2__day">{{ $s.day }}</div>
           <div class="sched-card-v2__badges">
-            <span class="sched-card-v2__badge">{{ $s.gender }}</span>
             <span class="sched-card-v2__badge">{{ $s.age }}</span>
           </div>
         </div>
         {{ end }}
       </div>
+      {{ end }}
+
+      {{/* Boys */}}
+      {{ if $buben }}
+      <div class="sched-gender-label sched-gender-label--buben">
+        <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="14" r="5"/><line x1="21" y1="3" x2="15" y2="9"/><polyline points="16 3 21 3 21 8"/></svg>
+        Buben
+      </div>
+      <div class="sched-grid-v2">
+        {{ range $i, $s := $buben }}
+        {{ $hue := 145 }}
+        {{ if eq $s.stufe "Wölflinge" }}{{ $hue = 35 }}{{ end }}
+        {{ if eq $s.stufe "Explorer" }}{{ $hue = 200 }}{{ end }}
+        <div class="sched-card-v2" data-animate="fade-up" data-delay="{{ add $i 1 }}" style="--sched-hue: {{ $hue }}">
+          <div class="sched-card-v2__top-bar"></div>
+          <div class="sched-card-v2__number">{{ printf "%02d" (add $i 1) }}</div>
+          <div class="sched-card-v2__stufe">{{ $s.stufe }}</div>
+          <div class="sched-card-v2__day">{{ $s.day }}</div>
+          <div class="sched-card-v2__badges">
+            <span class="sched-card-v2__badge">{{ $s.age }}</span>
+          </div>
+        </div>
+        {{ end }}
+      </div>
+      {{ end }}
+
     </div>
     {{ end }}
 
