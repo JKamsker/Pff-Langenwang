@@ -1,6 +1,22 @@
 ---
 title: "Ueber uns"
 subtitle: "Die Pfadfinder Langenwang stellen sich vor"
+aliases:
+  - "/gruppenleitung/"
+
+leaders:
+  - name: "Sepp Windhaber"
+    role: "Gruppenleiter"
+    initials: "SW"
+  - name: "Verena Kiesling"
+    role: "Gruppenleiterin"
+    initials: "VK"
+  - name: "Bernhard Wagner"
+    role: "GL-Stellvertreter"
+    initials: "BW"
+  - name: "Anna Wagner"
+    role: "GL-Stellvertreterin"
+    initials: "AW"
 ---
 
 ## Wer wir sind
@@ -46,4 +62,8 @@ Neben diesen Bauaktivitaeten wurden 1964 das Helmut Horten Heim am Fusse der Rax
 
 Ein fester Bestandteil unseres Pfadfinderjahres sind die Sommerlager. Die internationalen Kontakte spiegeln sich in unseren Auslandssommerlagern wider. Ob die herrlichen Straende von Kreta, Korfu, Sardinien, Rhodos oder der Norden Europas mit Finnland, Schweden oder Norwegen, ueberall waren die Langenwanger PfadfinderInnen gern gesehene Gaeste. Einige Male verschlug es uns sogar ueber den Ozean nach Canada. Besuche auslaendischer Pfadfindergruppen in Langenwang vertiefen diese Kontakte. Die Wichtel und Woelflinge verbringen jedes Jahr abenteuerliche Lagertage in verschiedenen Regionen in Oesterreich.
 
-Neben den Heimstunden, Wochenendlagern und dem woechentlichen Gruppenrat veranstalten wir seit ueber 50 Jahren den Langenwanger Kinderball, das grosse Kinderfest und die Weihnachtsaktion der Guides (Christbaeumchen fuer alte Leute). Bei der Aktion „GUTE TAT“ werden Spazierwege und Ufer vom Muell gesaeubert. Ein weiteres Highlight ist der jaehrliche grosse Patrullenwettkampf gemeinsam mit den Fuerstenfelder Pfadfindern.
+Neben den Heimstunden, Wochenendlagern und dem woechentlichen Gruppenrat veranstalten wir seit ueber 50 Jahren den Langenwanger Kinderball, das grosse Kinderfest und die Weihnachtsaktion der Guides (Christbaeumchen fuer alte Leute). Bei der Aktion „GUTE TAT” werden Spazierwege und Ufer vom Muell gesaeubert. Ein weiteres Highlight ist der jaehrliche grosse Patrullenwettkampf gemeinsam mit den Fuerstenfelder Pfadfindern.
+
+## Gruppenleitung
+
+![Gruppenleitung der Pfadfinder Langenwang (Foto)](/images/gruppenleitung/2022-GFs-b-bearbeitet-1024x616.jpg)

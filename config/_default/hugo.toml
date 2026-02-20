@@ -18,9 +18,13 @@ title = "Pfadfinder Langenwang"
     url = "/termine/"
     weight = 1
   [[menus.main]]
+    name = "Ueber uns"
+    url = "/ueber-uns/"
+    weight = 2
+  [[menus.main]]
     name = "Kontakt"
     url = "/kontakt/"
-    weight = 2
+    weight = 3
 
   # Footer navigation (all pages)
   [[menus.footer]]
@@ -32,21 +36,17 @@ title = "Pfadfinder Langenwang"
     url = "/termine/"
     weight = 2
   [[menus.footer]]
-    name = "Gruppenleitung"
-    url = "/gruppenleitung/"
-    weight = 5
+    name = "Ueber uns"
+    url = "/ueber-uns/"
+    weight = 3
   [[menus.footer]]
     name = "Huetten & Heime"
     url = "/huetten/"
-    weight = 6
-  [[menus.footer]]
-    name = "Ueber uns"
-    url = "/ueber-uns/"
-    weight = 7
+    weight = 4
   [[menus.footer]]
     name = "Kontakt"
     url = "/kontakt/"
-    weight = 8
+    weight = 5
   [[menus.footer]]
     name = "Datenschutz"
     url = "/datenschutzerklaerung/"
