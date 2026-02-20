@@ -29,18 +29,26 @@ title = "Pfadfinder Langenwang"
     url = "/termine/"
     weight = 4
   [[menus.main]]
+    name = "Neuigkeiten"
+    url = "/neuigkeiten/"
+    weight = 5
+  [[menus.main]]
     name = "Huetten"
     url = "/huetten/"
-    weight = 5
+    weight = 6
     identifier = "huetten"
   [[menus.main]]
     name = "Kontakt"
     url = "/kontakt/"
-    weight = 6
+    weight = 7
   [[menus.main]]
     name = "Ueber uns"
     url = "/ueber-uns/"
-    weight = 7
+    weight = 8
+  [[menus.main]]
+    name = "Datenschutz"
+    url = "/datenschutzerklaerung/"
+    weight = 99
 
 [markup]
   [markup.goldmark]

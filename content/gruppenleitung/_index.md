@@ -16,3 +16,5 @@ leaders:
     role: "GL-Stellvertreterin"
     initials: "AW"
 ---
+
+![Gruppenleitung der Pfadfinder Langenwang (Foto)](/images/gruppenleitung/2022-GFs-b-bearbeitet-1024x616.jpg)

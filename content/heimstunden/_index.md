@@ -28,7 +28,11 @@ schedule:
     gender: "Buben"
     age: "ab 14 Jahre"
 
-info: "Fuer Information stehen wir Dir gerne zur Verfuegung! Jeden **Dienstag ab 19:00 Uhr** im Pfadfinderheim und in den Heimstunden."
+info: "Fuer Information stehen wir Dir gerne zur Verfuegung! Jeden **Dienstag ab 19:00 Uhr** im Pfadfinderheim und in den Heimstunden. Telefon: **+43 664 9373662** oder **+43 664 5363953**."
 ---
 
 Unsere Heimstunden finden woechentlich am **Samstag** statt und sind das Herzstueck unserer Pfadfinderarbeit. Hier lernen die Kinder und Jugendlichen das Binden von Knoten, den Umgang mit Kompass und Karte, spielen gemeinsam und haben Spass.
+
+Die aktuellen Heimstundenzeiten findest du in der Tabelle weiter unten.
+
+*Willkommen im Abenteuer…*

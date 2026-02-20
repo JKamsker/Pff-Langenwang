@@ -14,11 +14,13 @@
 
     {{ if .Pages }}
     <div class="card-grid">
-      {{ range .Pages }}
+      {{ range .Pages.ByDate.Reverse }}
       <a href="{{ .RelPermalink }}" class="card" data-animate="fade-up">
         <h3 class="card-title">{{ .Title }}</h3>
         {{ with .Params.subtitle }}
         <p class="card-subtitle">{{ . }}</p>
+        {{ else }}
+        <p class="card-subtitle">{{ .Date.Format "02.01.2006" }}</p>
         {{ end }}
         <span class="card-arrow">&rarr;</span>
       </a>
