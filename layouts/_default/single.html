@@ -1,0 +1,16 @@
+{{ define "main" }}
+<article class="page-single">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-title" data-animate="fade-up">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <p class="page-subtitle" data-animate="fade-up" data-delay="1">{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="page-content content-width" data-animate="fade-up" data-delay="2">
+    {{ .Content }}
+  </div>
+</article>
+{{ end }}

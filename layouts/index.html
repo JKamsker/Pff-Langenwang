@@ -1,0 +1,191 @@
+{{ define "main" }}
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-grain"></div>
+    <div class="hero-gradient"></div>
+    <!-- Decorative SVG topography lines -->
+    <svg class="hero-topo" viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M0 400 Q300 350 600 380 T1200 360" stroke="currentColor" fill="none" stroke-width="1" opacity="0.08"/>
+      <path d="M0 420 Q300 370 600 400 T1200 380" stroke="currentColor" fill="none" stroke-width="1" opacity="0.06"/>
+      <path d="M0 440 Q300 390 600 420 T1200 400" stroke="currentColor" fill="none" stroke-width="1" opacity="0.04"/>
+      <path d="M0 300 Q200 250 400 280 Q600 310 800 270 Q1000 230 1200 260" stroke="currentColor" fill="none" stroke-width="0.8" opacity="0.06"/>
+      <path d="M0 200 Q300 170 600 190 T1200 180" stroke="currentColor" fill="none" stroke-width="0.6" opacity="0.04"/>
+    </svg>
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-badge" data-animate="fade-up">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
+        <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+      </svg>
+      Pfadfinder &amp; Pfadfinderinnen
+    </div>
+
+    <h1 class="hero-title" data-animate="fade-up" data-delay="1">
+      <span class="hero-title-line">Pfadfinder</span>
+      <span class="hero-title-line hero-title-accent">Langenwang</span>
+    </h1>
+
+    <p class="hero-motto" data-animate="fade-up" data-delay="2">…mehr erleben</p>
+
+    <p class="hero-description" data-animate="fade-up" data-delay="3">
+      Gemeinsam die Natur entdecken, Abenteuer erleben und Freundschaften fuers Leben schliessen.
+      Willkommen bei den Pfadfindern Langenwang.
+    </p>
+
+    <div class="hero-actions" data-animate="fade-up" data-delay="4">
+      <a href="/heimstunden/" class="btn btn-primary">Heimstunden entdecken</a>
+      <a href="/kontakt/" class="btn btn-outline">Kontakt aufnehmen</a>
+    </div>
+  </div>
+
+  <div class="hero-scroll-hint" data-animate="fade-up" data-delay="5">
+    <span>Entdecken</span>
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M19 12l-7 7-7-7"/>
+    </svg>
+  </div>
+</section>
+
+<!-- ABOUT TEASER -->
+<section class="section section-about">
+  <div class="content-width">
+    <div class="split-layout">
+      <div class="split-text" data-animate="fade-up">
+        <span class="section-label">Wer wir sind</span>
+        <h2 class="section-title">Abenteuer beginnen<br>vor der Haustuer</h2>
+        <p class="section-text">
+          Die Pfadfinder Langenwang bieten Kindern und Jugendlichen einen Ort, an dem sie die Natur erleben,
+          neue Faehigkeiten erlernen und Teil einer starken Gemeinschaft werden. Von Knotentechnik ueber
+          Orientierung mit Kompass und Karte bis hin zu gemeinsamen Spielen und Lagern &mdash; bei uns ist
+          fuer jeden etwas dabei.
+        </p>
+        <a href="/ueber-uns/" class="link-arrow">Mehr ueber uns <span>&rarr;</span></a>
+      </div>
+      <div class="split-visual" data-animate="fade-up" data-delay="1">
+        <div class="visual-card">
+          <div class="visual-card-icon">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" width="48" height="48">
+              <path d="M24 4L6 44h36L24 4z" stroke="currentColor" stroke-width="2.5" fill="none"/>
+              <path d="M24 18v12M24 34v2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span class="visual-card-year">75+</span>
+          <span class="visual-card-label">Jahre Pfadfinder<br>in Langenwang</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HEIMSTUNDEN OVERVIEW -->
+<section class="section section-heimstunden">
+  <div class="content-width">
+    <div class="section-header" data-animate="fade-up">
+      <span class="section-label">Unsere Stufen</span>
+      <h2 class="section-title">Heimstunden</h2>
+      <p class="section-text section-text--centered">
+        Jede Woche treffen sich unsere Gruppen zu den Heimstunden.
+        Dabei wird gespielt, gelernt und gemeinsam Abenteuer erlebt.
+      </p>
+    </div>
+
+    <div class="stufen-grid">
+      <div class="stufe-card" data-animate="fade-up" data-delay="0">
+        <div class="stufe-color" style="--stufe-hue: 35"></div>
+        <div class="stufe-content">
+          <h3 class="stufe-name">Wichtel &amp; Woelflinge</h3>
+          <p class="stufe-age">7 &ndash; 10 Jahre</p>
+          <p class="stufe-desc">Spielerisch die Welt entdecken und erste Pfadfinder-Erfahrungen sammeln.</p>
+        </div>
+      </div>
+
+      <div class="stufe-card" data-animate="fade-up" data-delay="1">
+        <div class="stufe-color" style="--stufe-hue: 145"></div>
+        <div class="stufe-content">
+          <h3 class="stufe-name">Guides &amp; Spaeher</h3>
+          <p class="stufe-age">10 &ndash; 13 Jahre</p>
+          <p class="stufe-desc">Teamwork, Natur und Abenteuer stehen im Mittelpunkt.</p>
+        </div>
+      </div>
+
+      <div class="stufe-card" data-animate="fade-up" data-delay="2">
+        <div class="stufe-color" style="--stufe-hue: 210"></div>
+        <div class="stufe-content">
+          <h3 class="stufe-name">Caravelles &amp; Explorer</h3>
+          <p class="stufe-age">13 &ndash; 16 Jahre</p>
+          <p class="stufe-desc">Eigenverantwortung und groessere Projekte in der Gemeinschaft.</p>
+        </div>
+      </div>
+
+      <div class="stufe-card" data-animate="fade-up" data-delay="3">
+        <div class="stufe-color" style="--stufe-hue: 280"></div>
+        <div class="stufe-content">
+          <h3 class="stufe-name">Ranger &amp; Rover</h3>
+          <p class="stufe-age">16 &ndash; 20 Jahre</p>
+          <p class="stufe-desc">Selbststaendig Projekte planen und die Gemeinschaft gestalten.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="section-cta" data-animate="fade-up">
+      <a href="/heimstunden/" class="btn btn-primary">Alle Heimstunden-Zeiten</a>
+    </div>
+  </div>
+</section>
+
+<!-- FACILITIES -->
+<section class="section section-facilities">
+  <div class="content-width">
+    <div class="section-header" data-animate="fade-up">
+      <span class="section-label">Unsere Raeumlichkeiten</span>
+      <h2 class="section-title">Huetten &amp; Heime</h2>
+    </div>
+
+    <div class="facilities-grid">
+      <a href="/huetten/pfadfinderheim/" class="facility-card" data-animate="fade-up">
+        <div class="facility-icon">
+          <svg viewBox="0 0 48 48" fill="none" width="40" height="40">
+            <path d="M6 24L24 8l18 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M10 22v16h28V22" stroke="currentColor" stroke-width="2.5"/>
+            <rect x="19" y="28" width="10" height="10" stroke="currentColor" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 class="facility-name">Das Pfadfinderheim</h3>
+        <p class="facility-desc">Unser Hauptquartier an der Grazerstrasse &mdash; mit grossem Saal, Kueche und allem, was wir brauchen.</p>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+
+      <a href="/huetten/bootshuette/" class="facility-card" data-animate="fade-up" data-delay="1">
+        <div class="facility-icon">
+          <svg viewBox="0 0 48 48" fill="none" width="40" height="40">
+            <path d="M4 32c4-4 8 0 12-4s8 0 12-4 8 0 12-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
+            <path d="M4 38c4-4 8 0 12-4s8 0 12-4 8 0 12-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
+            <path d="M14 28l10-18 10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <h3 class="facility-name">Die Bootshuette</h3>
+        <p class="facility-desc">Tretboot, Kanus und Kajaks &mdash; Wasserspass fuer Lager und Veranstaltungen.</p>
+        <span class="card-arrow">&rarr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT CTA -->
+<section class="section section-cta-block">
+  <div class="content-width">
+    <div class="cta-block" data-animate="fade-up">
+      <h2 class="cta-title">Lust auf Abenteuer?</h2>
+      <p class="cta-text">Melde dich bei uns &mdash; wir freuen uns ueber jedes neue Mitglied!</p>
+      <div class="cta-actions">
+        <a href="/kontakt/" class="btn btn-primary btn-light">Kontakt aufnehmen</a>
+        <a href="mailto:{{ .Site.Params.email }}" class="btn btn-outline btn-outline-light">{{ .Site.Params.email }}</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,48 @@
+baseURL = "https://pfadfinder-langenwang.at/"
+languageCode = "de-AT"
+title = "Pfadfinder Langenwang"
+# No theme — custom layouts used directly
+
+[params]
+  subtitle = "…mehr erleben"
+  description = "Offizielle Seite der Pfadfinder und Pfadfinderinnen Langenwang"
+  address = "Grazerstrasse 26, 8665 Langenwang"
+  email = "pfadfinder.langenwang@aon.at"
+  phone = "+43 664 9373662"
+  boatHutEmail = "bootshuette.langenwang@gmail.com"
+
+[menus]
+  [[menus.main]]
+    name = "Startseite"
+    url = "/"
+    weight = 1
+  [[menus.main]]
+    name = "Heimstunden"
+    url = "/heimstunden/"
+    weight = 2
+  [[menus.main]]
+    name = "Gruppenleitung"
+    url = "/gruppenleitung/"
+    weight = 3
+  [[menus.main]]
+    name = "Termine"
+    url = "/termine/"
+    weight = 4
+  [[menus.main]]
+    name = "Huetten"
+    url = "/huetten/"
+    weight = 5
+    identifier = "huetten"
+  [[menus.main]]
+    name = "Kontakt"
+    url = "/kontakt/"
+    weight = 6
+  [[menus.main]]
+    name = "Ueber uns"
+    url = "/ueber-uns/"
+    weight = 7
+
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.renderer]
+      unsafe = true
