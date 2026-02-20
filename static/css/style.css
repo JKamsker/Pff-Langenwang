@@ -1860,9 +1860,9 @@ a {
 
   .vsh-panel {
     flex: none;
-    height: 55vw;
-    min-height: 260px;
-    max-height: 380px;
+    height: 65vw;
+    min-height: 300px;
+    max-height: 440px;
   }
 
   .vsh-panel:hover,
@@ -1875,6 +1875,16 @@ a {
     border-top: 1px solid rgba(246, 241, 234, 0.12);
   }
 
+  .vsh-panel__fog {
+    background: linear-gradient(
+      to bottom,
+      rgba(27, 58, 45, 0.55) 0%,
+      rgba(27, 58, 45, 0.40) 30%,
+      rgba(27, 58, 45, 0.55) 60%,
+      rgba(27, 58, 45, 0.95) 100%
+    );
+  }
+
   .vsh-panel__body {
     padding: var(--space-lg) var(--space-md);
   }
@@ -1884,6 +1894,10 @@ a {
   .vsh-panel__go {
     opacity: 1;
     transform: translateY(0);
+  }
+
+  .vsh {
+    min-height: auto;
   }
 
   .vsh-label {
@@ -1899,8 +1913,8 @@ a {
 
 @media (max-width: 480px) {
   .vsh-panel {
-    height: 52vw;
-    min-height: 220px;
+    height: 60vw;
+    min-height: 260px;
   }
 
   .vsh-panel__body {
