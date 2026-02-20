@@ -1,0 +1,65 @@
+{{ define "main" }}
+<section class="page-single">
+  <div class="page-hero">
+    <div class="page-hero-inner">
+      <h1 class="page-title" data-animate="fade-up">{{ .Title }}</h1>
+      {{ with .Params.subtitle }}
+      <p class="page-subtitle" data-animate="fade-up" data-delay="1">{{ . }}</p>
+      {{ end }}
+    </div>
+  </div>
+
+  <div class="page-content content-width" data-animate="fade-up" data-delay="2">
+    {{ .Content }}
+
+    {{/* Address */}}
+    {{ with .Params.address }}
+    <h2>Adresse</h2>
+    <p><strong>{{ .name }}</strong><br>{{ .street }}</p>
+    <hr>
+    {{ end }}
+
+    {{/* Gruppenleitung */}}
+    {{ with .Params.leadership }}
+    <h2>Gruppenleitung</h2>
+    <div class="contact-grid">
+      {{ range . }}
+      <div class="contact-card">
+        <h3>{{ .name }}</h3>
+        <p><strong>{{ .role }}</strong></p>
+        {{ with .email }}<p>E-Mail: <a href="mailto:{{ . }}">{{ . }}</a></p>{{ end }}
+        {{ with .phone }}<p>Telefon: <a href="tel:{{ . }}">{{ . }}</a></p>{{ end }}
+      </div>
+      {{ end }}
+    </div>
+    <hr>
+    {{ end }}
+
+    {{/* Stufenleiter */}}
+    {{ with .Params.sections }}
+    <h2>Stufenleiter</h2>
+    <div class="contact-grid">
+      {{ range . }}
+      <div class="contact-card">
+        <h3>{{ .title }}</h3>
+        {{ range .contacts }}
+        <p>
+          {{ .name }}
+          {{- with .phone }}: <a href="tel:{{ . }}">{{ . }}</a>{{ end }}
+          {{- with .email }}<br>E-Mail: <a href="mailto:{{ . }}">{{ . }}</a>{{ end }}
+        </p>
+        {{ end }}
+      </div>
+      {{ end }}
+    </div>
+    <hr>
+    {{ end }}
+
+    {{/* Bootshuette */}}
+    {{ with .Params.boathut_email }}
+    <h2>Bootshuette Reservierung</h2>
+    <p>E-Mail: <strong><a href="mailto:{{ . }}">{{ . }}</a></strong></p>
+    {{ end }}
+  </div>
+</section>
+{{ end }}

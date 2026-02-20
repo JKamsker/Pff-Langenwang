@@ -1,11 +1,11 @@
 {{ define "main" }}
 
-<!-- HERO -->
+{{/* ---- HERO ---- */}}
+{{ with .Params.hero }}
 <section class="hero">
   <div class="hero-bg">
     <div class="hero-grain"></div>
     <div class="hero-gradient"></div>
-    <!-- Decorative SVG topography lines -->
     <svg class="hero-topo" viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
       <path d="M0 400 Q300 350 600 380 T1200 360" stroke="currentColor" fill="none" stroke-width="1" opacity="0.08"/>
       <path d="M0 420 Q300 370 600 400 T1200 380" stroke="currentColor" fill="none" stroke-width="1" opacity="0.06"/>
@@ -16,54 +16,63 @@
   </div>
 
   <div class="hero-content">
+    {{ with .badge }}
     <div class="hero-badge" data-animate="fade-up">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16">
         <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
       </svg>
-      Pfadfinder &amp; Pfadfinderinnen
+      {{ . }}
     </div>
+    {{ end }}
 
     <h1 class="hero-title" data-animate="fade-up" data-delay="1">
-      <span class="hero-title-line">Pfadfinder</span>
-      <span class="hero-title-line hero-title-accent">Langenwang</span>
+      <span class="hero-title-line">{{ .title_line1 }}</span>
+      <span class="hero-title-line hero-title-accent">{{ .title_line2 }}</span>
     </h1>
 
-    <p class="hero-motto" data-animate="fade-up" data-delay="2">…mehr erleben</p>
+    {{ with .motto }}
+    <p class="hero-motto" data-animate="fade-up" data-delay="2">{{ . }}</p>
+    {{ end }}
 
-    <p class="hero-description" data-animate="fade-up" data-delay="3">
-      Gemeinsam die Natur entdecken, Abenteuer erleben und Freundschaften fuers Leben schliessen.
-      Willkommen bei den Pfadfindern Langenwang.
-    </p>
+    {{ with .description }}
+    <p class="hero-description" data-animate="fade-up" data-delay="3">{{ . }}</p>
+    {{ end }}
 
     <div class="hero-actions" data-animate="fade-up" data-delay="4">
-      <a href="/heimstunden/" class="btn btn-primary">Heimstunden entdecken</a>
-      <a href="/kontakt/" class="btn btn-outline">Kontakt aufnehmen</a>
+      {{ with .primary_cta }}
+      <a href="{{ .url }}" class="btn btn-primary">{{ .text }}</a>
+      {{ end }}
+      {{ with .secondary_cta }}
+      <a href="{{ .url }}" class="btn btn-outline">{{ .text }}</a>
+      {{ end }}
     </div>
   </div>
 
+  {{ with .scroll_hint }}
   <div class="hero-scroll-hint" data-animate="fade-up" data-delay="5">
-    <span>Entdecken</span>
+    <span>{{ . }}</span>
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
       <path d="M12 5v14M19 12l-7 7-7-7"/>
     </svg>
   </div>
+  {{ end }}
 </section>
+{{ end }}
 
-<!-- ABOUT TEASER -->
+{{/* ---- ABOUT TEASER ---- */}}
+{{ with .Params.about }}
 <section class="section section-about">
   <div class="content-width">
     <div class="split-layout">
       <div class="split-text" data-animate="fade-up">
-        <span class="section-label">Wer wir sind</span>
-        <h2 class="section-title">Abenteuer beginnen<br>vor der Haustuer</h2>
-        <p class="section-text">
-          Die Pfadfinder Langenwang bieten Kindern und Jugendlichen einen Ort, an dem sie die Natur erleben,
-          neue Faehigkeiten erlernen und Teil einer starken Gemeinschaft werden. Von Knotentechnik ueber
-          Orientierung mit Kompass und Karte bis hin zu gemeinsamen Spielen und Lagern &mdash; bei uns ist
-          fuer jeden etwas dabei.
-        </p>
-        <a href="/ueber-uns/" class="link-arrow">Mehr ueber uns <span>&rarr;</span></a>
+        <span class="section-label">{{ .label }}</span>
+        <h2 class="section-title">{{ .title | safeHTML }}</h2>
+        <p class="section-text">{{ .text }}</p>
+        {{ with .link }}
+        <a href="{{ .url }}" class="link-arrow">{{ .text }} <span>&rarr;</span></a>
+        {{ end }}
       </div>
+      {{ with .highlight }}
       <div class="split-visual" data-animate="fade-up" data-delay="1">
         <div class="visual-card">
           <div class="visual-card-icon">
@@ -72,112 +81,107 @@
               <path d="M24 18v12M24 34v2" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
             </svg>
           </div>
-          <span class="visual-card-year">75+</span>
-          <span class="visual-card-label">Jahre Pfadfinder<br>in Langenwang</span>
+          <span class="visual-card-year">{{ .number }}</span>
+          <span class="visual-card-label">{{ .label | safeHTML }}</span>
         </div>
       </div>
+      {{ end }}
     </div>
   </div>
 </section>
+{{ end }}
 
-<!-- HEIMSTUNDEN OVERVIEW -->
+{{/* ---- HEIMSTUNDEN / STUFEN ---- */}}
+{{ with .Params.stufen }}
 <section class="section section-heimstunden">
   <div class="content-width">
     <div class="section-header" data-animate="fade-up">
-      <span class="section-label">Unsere Stufen</span>
-      <h2 class="section-title">Heimstunden</h2>
-      <p class="section-text section-text--centered">
-        Jede Woche treffen sich unsere Gruppen zu den Heimstunden.
-        Dabei wird gespielt, gelernt und gemeinsam Abenteuer erlebt.
-      </p>
+      <span class="section-label">{{ .label }}</span>
+      <h2 class="section-title">{{ .title }}</h2>
+      {{ with .description }}
+      <p class="section-text section-text--centered">{{ . }}</p>
+      {{ end }}
     </div>
 
+    {{ with .items }}
     <div class="stufen-grid">
-      <div class="stufe-card" data-animate="fade-up" data-delay="0">
-        <div class="stufe-color" style="--stufe-hue: 35"></div>
+      {{ range $i, $stufe := . }}
+      <div class="stufe-card" data-animate="fade-up" data-delay="{{ $i }}">
+        <div class="stufe-color" style="--stufe-hue: {{ $stufe.hue }}"></div>
         <div class="stufe-content">
-          <h3 class="stufe-name">Wichtel &amp; Woelflinge</h3>
-          <p class="stufe-age">6 &ndash; 10 Jahre &middot; Samstag 14:00</p>
-          <p class="stufe-desc">Spielerisch die Welt entdecken und erste Pfadfinder-Erfahrungen sammeln.</p>
+          <h3 class="stufe-name">{{ $stufe.name }}</h3>
+          <p class="stufe-age">{{ $stufe.age }}</p>
+          <p class="stufe-desc">{{ $stufe.description }}</p>
         </div>
       </div>
-
-      <div class="stufe-card" data-animate="fade-up" data-delay="1">
-        <div class="stufe-color" style="--stufe-hue: 145"></div>
-        <div class="stufe-content">
-          <h3 class="stufe-name">Guides &amp; Spaeher</h3>
-          <p class="stufe-age">10 &ndash; 14 Jahre &middot; Samstag 15:00</p>
-          <p class="stufe-desc">Teamwork, Natur und Abenteuer stehen im Mittelpunkt.</p>
-        </div>
-      </div>
-
-      <div class="stufe-card" data-animate="fade-up" data-delay="2">
-        <div class="stufe-color" style="--stufe-hue: 210"></div>
-        <div class="stufe-content">
-          <h3 class="stufe-name">Caravelles &amp; Explorer</h3>
-          <p class="stufe-age">ab 14 Jahre &middot; Samstag n. Absprache</p>
-          <p class="stufe-desc">Eigenverantwortung und groessere Projekte in der Gemeinschaft.</p>
-        </div>
-      </div>
-
+      {{ end }}
     </div>
+    {{ end }}
 
+    {{ with .cta }}
     <div class="section-cta" data-animate="fade-up">
-      <a href="/heimstunden/" class="btn btn-primary">Alle Heimstunden-Zeiten</a>
+      <a href="{{ .url }}" class="btn btn-primary">{{ .text }}</a>
     </div>
+    {{ end }}
   </div>
 </section>
+{{ end }}
 
-<!-- FACILITIES -->
+{{/* ---- FACILITIES ---- */}}
+{{ with .Params.facilities }}
 <section class="section section-facilities">
   <div class="content-width">
     <div class="section-header" data-animate="fade-up">
-      <span class="section-label">Unsere Raeumlichkeiten</span>
-      <h2 class="section-title">Huetten &amp; Heime</h2>
+      <span class="section-label">{{ .label }}</span>
+      <h2 class="section-title">{{ .title }}</h2>
     </div>
 
+    {{ with .items }}
     <div class="facilities-grid">
-      <a href="/huetten/pfadfinderheim/" class="facility-card" data-animate="fade-up">
+      {{ range $i, $facility := . }}
+      <a href="{{ $facility.url }}" class="facility-card" data-animate="fade-up" {{ if $i }}data-delay="{{ $i }}"{{ end }}>
         <div class="facility-icon">
+          {{ if eq $facility.icon "home" }}
           <svg viewBox="0 0 48 48" fill="none" width="40" height="40">
             <path d="M6 24L24 8l18 16" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M10 22v16h28V22" stroke="currentColor" stroke-width="2.5"/>
             <rect x="19" y="28" width="10" height="10" stroke="currentColor" stroke-width="2"/>
           </svg>
-        </div>
-        <h3 class="facility-name">Das Pfadfinderheim</h3>
-        <p class="facility-desc">Unser Hauptquartier an der Grazerstrasse &mdash; mit grossem Saal, Kueche und allem, was wir brauchen.</p>
-        <span class="card-arrow">&rarr;</span>
-      </a>
-
-      <a href="/huetten/bootshuette/" class="facility-card" data-animate="fade-up" data-delay="1">
-        <div class="facility-icon">
+          {{ else if eq $facility.icon "boat" }}
           <svg viewBox="0 0 48 48" fill="none" width="40" height="40">
             <path d="M4 32c4-4 8 0 12-4s8 0 12-4 8 0 12-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/>
             <path d="M4 38c4-4 8 0 12-4s8 0 12-4 8 0 12-4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" opacity="0.4"/>
             <path d="M14 28l10-18 10 18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
+          {{ end }}
         </div>
-        <h3 class="facility-name">Die Bootshuette</h3>
-        <p class="facility-desc">Tretboot, Kanus und Kajaks &mdash; Wasserspass fuer Lager und Veranstaltungen.</p>
+        <h3 class="facility-name">{{ $facility.name }}</h3>
+        <p class="facility-desc">{{ $facility.description }}</p>
         <span class="card-arrow">&rarr;</span>
       </a>
+      {{ end }}
     </div>
+    {{ end }}
   </div>
 </section>
+{{ end }}
 
-<!-- CONTACT CTA -->
+{{/* ---- CONTACT CTA ---- */}}
+{{ with .Params.cta }}
 <section class="section section-cta-block">
   <div class="content-width">
     <div class="cta-block" data-animate="fade-up">
-      <h2 class="cta-title">Lust auf Abenteuer?</h2>
-      <p class="cta-text">Melde dich bei uns &mdash; wir freuen uns ueber jedes neue Mitglied!</p>
+      <h2 class="cta-title">{{ .title }}</h2>
+      <p class="cta-text">{{ .text }}</p>
       <div class="cta-actions">
-        <a href="/kontakt/" class="btn btn-primary btn-light">Kontakt aufnehmen</a>
-        <a href="mailto:{{ .Site.Params.email }}" class="btn btn-outline btn-outline-light">{{ .Site.Params.email }}</a>
+        {{ with .primary }}
+        <a href="{{ .url }}" class="btn btn-primary btn-light">{{ .text }}</a>
+        {{ end }}
+        <a href="mailto:{{ $.Site.Params.email }}" class="btn btn-outline btn-outline-light">{{ $.Site.Params.email }}</a>
       </div>
     </div>
   </div>
 </section>
+{{ end }}
 
 {{ end }}

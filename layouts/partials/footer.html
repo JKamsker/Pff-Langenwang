@@ -3,9 +3,9 @@
     <div class="footer-grid">
       <div class="footer-col footer-brand-col">
         <a href="/" class="footer-brand">
-          <strong>Pfadfinder</strong> Langenwang
+          <strong>{{ .Site.Title }}</strong>
         </a>
-        <p class="footer-motto">…mehr erleben</p>
+        <p class="footer-motto">{{ .Site.Params.subtitle }}</p>
         <p class="footer-address">{{ .Site.Params.address }}</p>
       </div>
 
@@ -28,7 +28,7 @@
     </div>
 
     <div class="footer-bottom">
-      <p>&copy; {{ now.Year }} Pfadfinder Langenwang &mdash; alle Rechte vorbehalten</p>
+      <p>&copy; {{ now.Year }} {{ .Site.Title }} &mdash; alle Rechte vorbehalten</p>
     </div>
   </div>
 </footer>
