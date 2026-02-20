@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="de-AT">
 <head>
-	<meta name="generator" content="Hugo 0.156.0"><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+	<meta name="generator" content="Hugo 0.156.0"><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Pfadfinder Langenwang …mehr erleben</title>
 <meta name="description" content="Offizielle Seite der Pfadfinder und Pfadfinderinnen Langenwang">
@@ -67,10 +67,40 @@
 </header>
 <main>
 
+<style>
+.cta-block-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.cta-block-text {
+  flex: 1;
+  text-align: left;
+}
+.cta-block-text .cta-actions {
+  justify-content: flex-start;
+}
+.cta-block-visual {
+  flex-shrink: 0;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .cta-block-inner { flex-direction: column; }
+  .cta-block-text { text-align: center; }
+  .cta-block-text .cta-actions { justify-content: center; }
+  .cta-block-visual { display: none; }
+}
+</style>
+
 
 
 <section class="hero">
   <div class="hero-bg">
+    
     <div class="hero-grain"></div>
     <div class="hero-gradient"></div>
     <svg class="hero-topo" viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -173,8 +203,8 @@
     
     <div class="stufen-grid">
       
-      <div class="stufe-card" data-animate="fade-up" data-delay="0">
-        <div class="stufe-color" style="--stufe-hue: 35"></div>
+      <div class="stufe-card" data-animate="fade-up" data-delay="1" style="--stufe-hue: 35">
+        <div class="stufe-color"></div>
         <div class="stufe-content">
           <h3 class="stufe-name">Wichtel &amp; Wölflinge</h3>
           <p class="stufe-age">6 – 10 Jahre · Samstag 14:00</p>
@@ -182,8 +212,8 @@
         </div>
       </div>
       
-      <div class="stufe-card" data-animate="fade-up" data-delay="1">
-        <div class="stufe-color" style="--stufe-hue: 145"></div>
+      <div class="stufe-card" data-animate="fade-up" data-delay="2" style="--stufe-hue: 145">
+        <div class="stufe-color"></div>
         <div class="stufe-content">
           <h3 class="stufe-name">Guides &amp; Späher</h3>
           <p class="stufe-age">10 – 14 Jahre · Samstag 15:00</p>
@@ -191,8 +221,8 @@
         </div>
       </div>
       
-      <div class="stufe-card" data-animate="fade-up" data-delay="2">
-        <div class="stufe-color" style="--stufe-hue: 210"></div>
+      <div class="stufe-card" data-animate="fade-up" data-delay="3" style="--stufe-hue: 210">
+        <div class="stufe-color"></div>
         <div class="stufe-content">
           <h3 class="stufe-name">Caravelles &amp; Explorer</h3>
           <p class="stufe-age">ab 14 Jahre · Samstag n. Absprache</p>
@@ -265,13 +295,24 @@
 <section class="section section-cta-block">
   <div class="content-width">
     <div class="cta-block" data-animate="fade-up">
-      <h2 class="cta-title">Lust auf Abenteuer?</h2>
-      <p class="cta-text">Melde dich bei uns — wir freuen uns über jedes neue Mitglied!</p>
-      <div class="cta-actions">
-        
-        <a href="/kontakt/" class="btn btn-primary btn-light">Kontakt aufnehmen</a>
-        
-        <a href="mailto:pfadfinder.langenwang@aon.at" class="btn btn-outline btn-outline-light">pfadfinder.langenwang@aon.at</a>
+      <div class="cta-block-inner">
+        <div class="cta-block-text">
+          <h2 class="cta-title">Lust auf Abenteuer?</h2>
+          <p class="cta-text">Melde dich bei uns — wir freuen uns über jedes neue Mitglied!</p>
+          <div class="cta-actions">
+            
+            <a href="/kontakt/" class="btn btn-primary btn-light">Kontakt aufnehmen</a>
+            
+            <a href="mailto:pfadfinder.langenwang@aon.at" class="btn btn-outline btn-outline-light">pfadfinder.langenwang@aon.at</a>
+          </div>
+        </div>
+        <div class="cta-block-visual" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.15">
+            <path d="M60 10 L10 110 H110 Z" stroke="currentColor" stroke-width="3" fill="none"/>
+            <path d="M60 35 L30 90 H90 Z" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6"/>
+            <circle cx="60" cy="60" r="8" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
       </div>
     </div>
   </div>

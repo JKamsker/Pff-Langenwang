@@ -607,7 +607,7 @@ a {
   font-size: 1.05rem;
   font-weight: 500;
   font-variation-settings: "opsz" 24;
-  color: var(--forest);
+  color: hsl(var(--stufe-hue), 42%, 40%);
   margin-bottom: 0.25rem;
 }
 
@@ -877,6 +877,13 @@ a {
   border: 1px solid rgba(27, 58, 45, 0.08);
   border-radius: var(--radius-md);
   padding: var(--space-md);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(27, 58, 45, 0.07);
+  border-color: rgba(27, 58, 45, 0.15);
 }
 
 .contact-card h3 {
@@ -897,6 +904,17 @@ a {
   border-radius: var(--radius-md);
   padding: var(--space-md);
   text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.leader-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(27, 58, 45, 0.08);
+  border-color: rgba(27, 58, 45, 0.15);
+}
+.leader-card:hover .leader-avatar {
+  background: rgba(196, 146, 58, 0.12);
+  color: var(--amber);
 }
 
 .leader-card .leader-avatar {
@@ -1218,12 +1236,20 @@ a {
 }
 
 .venue-hero-subtitle {
+  display: inline-block;
   font-family: var(--font-display);
-  font-size: 1.2rem;
+  font-size: 1rem;
   font-style: italic;
   font-weight: 300;
-  color: rgba(246, 241, 234, 0.55);
+  color: rgba(246, 241, 234, 0.88);
   font-variation-settings: "opsz" 24;
+  background: rgba(246, 241, 234, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(246, 241, 234, 0.18);
+  border-radius: 100px;
+  padding: 0.35rem 1.1rem;
+  margin-top: 0.5rem;
 }
 
 /* ── Intro ── */
@@ -1290,6 +1316,11 @@ a {
   border-color: rgba(27, 58, 45, 0.14);
 }
 
+.venue-feature:nth-child(1) { border-top: 3px solid var(--amber); }
+.venue-feature:nth-child(2) { border-top: 3px solid var(--sage); }
+.venue-feature:nth-child(3) { border-top: 3px solid var(--forest-mid); }
+.venue-feature:nth-child(4) { border-top: 3px solid var(--amber); }
+
 .venue-feature-icon {
   width: 44px;
   height: 44px;
@@ -1339,6 +1370,7 @@ a {
 }
 
 .venue-gallery-item {
+  position: relative;
   overflow: hidden;
   border-radius: var(--radius-md);
   background: var(--parchment);
@@ -1358,11 +1390,23 @@ a {
 }
 
 .venue-gallery-item figcaption {
-  padding: 0.75rem var(--space-sm);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1.25rem var(--space-sm) 0.75rem;
+  background: linear-gradient(to top, rgba(27, 58, 45, 0.88) 0%, transparent 100%);
   font-size: 0.82rem;
-  color: rgba(61, 46, 30, 0.5);
+  color: rgba(246, 241, 234, 0.9);
   font-weight: 500;
   letter-spacing: 0.01em;
+  opacity: 0;
+  transform: translateY(4px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+}
+.venue-gallery-item:hover figcaption {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 /* ── CTA block ── */
@@ -1394,18 +1438,19 @@ a {
   text-align: center;
 }
 
-.venue-cta-title {
+.venue-cta-block .venue-cta-title {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.25rem);
   font-weight: 400;
   font-variation-settings: "opsz" 72;
   letter-spacing: -0.02em;
   margin-bottom: var(--space-xs);
+  color: var(--cream);
 }
 
-.venue-cta-text {
+.venue-cta-block .venue-cta-text {
   font-size: 1rem;
-  color: rgba(246, 241, 234, 0.6);
+  color: rgba(246, 241, 234, 0.75);
   max-width: 500px;
   margin: 0 auto var(--space-md);
   line-height: 1.7;
@@ -1852,4 +1897,282 @@ a {
   .vsh-panel__name {
     font-size: clamp(1.5rem, 7vw, 2.25rem);
   }
+}
+
+/* ============================================================
+   VENUE HERO — Animated background layer
+   ============================================================ */
+@keyframes venue-hero-bg-zoom {
+  from { transform: scale(1.06); }
+  to   { transform: scale(1); }
+}
+.venue-hero__bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--venue-bg-img);
+  background-size: cover;
+  background-position: center 40%;
+  animation: venue-hero-bg-zoom 2s cubic-bezier(0.23, 1, 0.32, 1) forwards;
+}
+
+/* ============================================================
+   TERMINE — Schedule Card Grid
+   ============================================================ */
+.sched-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-sm);
+  margin-top: var(--space-md);
+}
+.sched-card {
+  background: var(--white);
+  border: 1px solid rgba(27, 58, 45, 0.08);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.sched-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(27, 58, 45, 0.07);
+}
+.sched-card__accent {
+  height: 4px;
+  background: hsl(var(--sched-hue, 145), 42%, 40%);
+}
+.sched-card__body {
+  padding: var(--space-md);
+}
+.sched-card__stufe {
+  font-family: var(--font-display);
+  font-weight: 500;
+  font-variation-settings: "opsz" 24;
+  font-size: 1.05rem;
+  color: hsl(var(--sched-hue, 145), 42%, 35%);
+  margin-bottom: 0.2rem;
+}
+.sched-card__day {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--forest-mid);
+  margin-bottom: 0.5rem;
+}
+.sched-card__badges {
+  display: flex;
+  gap: 0.375rem;
+  flex-wrap: wrap;
+  margin-top: var(--space-sm);
+}
+.sched-card__badge {
+  display: inline-block;
+  padding: 0.2rem 0.65rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  border-radius: 100px;
+  background: rgba(27, 58, 45, 0.06);
+  color: var(--forest-mid);
+  letter-spacing: 0.02em;
+}
+@media (max-width: 768px) {
+  .sched-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 480px) {
+  .sched-grid { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   ÜBER UNS — History Timeline
+   ============================================================ */
+.history-timeline {
+  position: relative;
+  margin-top: var(--space-lg);
+  padding-left: var(--space-lg);
+}
+.history-timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  bottom: 0.6rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--amber), var(--sage), rgba(107, 143, 113, 0.1));
+  border-radius: 2px;
+}
+.history-entry {
+  position: relative;
+  margin-bottom: var(--space-md);
+}
+.history-entry::before {
+  content: '';
+  position: absolute;
+  left: calc(-1 * var(--space-lg) - 4px);
+  top: 0.45em;
+  width: 10px;
+  height: 10px;
+  background: var(--amber);
+  border-radius: 50%;
+  border: 2px solid var(--cream);
+  box-shadow: 0 0 0 2px var(--amber);
+}
+.history-entry__year {
+  font-family: var(--font-display);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  color: var(--amber);
+  text-transform: uppercase;
+  margin-bottom: 0.3rem;
+  font-variation-settings: "opsz" 14;
+}
+.history-entry__text {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(61, 46, 30, 0.8);
+}
+
+/* ============================================================
+   KONTAKT — Address Hero Card
+   ============================================================ */
+.contact-address-hero {
+  display: flex;
+  align-items: center;
+  gap: var(--space-md);
+  background: var(--white);
+  border: 1px solid rgba(27, 58, 45, 0.1);
+  border-left: 4px solid var(--forest-mid);
+  border-radius: var(--radius-md);
+  padding: var(--space-md) var(--space-lg);
+  margin-bottom: var(--space-lg);
+  text-decoration: none;
+  color: inherit;
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.contact-address-hero:hover {
+  box-shadow: 0 8px 32px rgba(27, 58, 45, 0.08);
+  transform: translateY(-2px);
+}
+.contact-address-hero__icon {
+  flex-shrink: 0;
+  width: 52px;
+  height: 52px;
+  background: rgba(27, 58, 45, 0.06);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--forest-mid);
+}
+.contact-address-hero__content {
+  flex: 1;
+}
+.contact-address-hero__name {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 500;
+  font-variation-settings: "opsz" 24;
+  color: var(--forest);
+  margin-bottom: 0.2rem;
+}
+.contact-address-hero__street {
+  font-size: 0.9rem;
+  color: rgba(61, 46, 30, 0.6);
+}
+.contact-address-hero__maps {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--forest-mid);
+  margin-top: 0.4rem;
+  letter-spacing: 0.02em;
+  transition: gap 0.2s ease;
+}
+.contact-address-hero:hover .contact-address-hero__maps {
+  gap: 0.65rem;
+}
+.contact-group--primary .contact-card {
+  border-left: 3px solid var(--amber);
+}
+
+/* ============================================================
+   DATENSCHUTZ — Info Card & TOC
+   ============================================================ */
+.dsgvo-info-card {
+  background: var(--parchment);
+  border: 1px solid rgba(27, 58, 45, 0.1);
+  border-left: 4px solid var(--amber);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-md);
+}
+.dsgvo-info-card p,
+.dsgvo-info-card address {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  margin-bottom: 0.25rem !important;
+  color: rgba(61, 46, 30, 0.85);
+}
+.dsgvo-toc {
+  background: var(--white);
+  border: 1px solid rgba(27, 58, 45, 0.08);
+  border-radius: var(--radius-md);
+  padding: var(--space-md);
+  margin-bottom: var(--space-lg);
+}
+.dsgvo-toc__title {
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--sage);
+  margin-bottom: var(--space-sm);
+}
+.dsgvo-toc__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.25rem 1rem;
+}
+.dsgvo-toc__list li {
+  margin: 0;
+}
+.dsgvo-toc__list a {
+  font-size: 0.875rem;
+  color: var(--forest-mid);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.2rem 0;
+  transition: gap 0.2s ease, color 0.2s ease;
+  text-decoration: none;
+}
+.dsgvo-toc__list a::before {
+  content: '→';
+  font-size: 0.75rem;
+  color: var(--amber);
+  flex-shrink: 0;
+}
+.dsgvo-toc__list a:hover {
+  color: var(--forest);
+  gap: 0.55rem;
+}
+@media (max-width: 600px) {
+  .dsgvo-toc__list { grid-template-columns: 1fr; }
+}
+
+/* ============================================================
+   HOME — Hero photo background layer
+   ============================================================ */
+.hero-photo-bg {
+  position: absolute;
+  inset: 0;
+  background-image: var(--hero-photo);
+  background-size: cover;
+  background-position: center 30%;
+  opacity: 0.12;
+  mix-blend-mode: luminosity;
+  pointer-events: none;
 }

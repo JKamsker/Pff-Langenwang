@@ -1,9 +1,39 @@
 {{ define "main" }}
 
+<style>
+.cta-block-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+.cta-block-text {
+  flex: 1;
+  text-align: left;
+}
+.cta-block-text .cta-actions {
+  justify-content: flex-start;
+}
+.cta-block-visual {
+  flex-shrink: 0;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+@media (max-width: 768px) {
+  .cta-block-inner { flex-direction: column; }
+  .cta-block-text { text-align: center; }
+  .cta-block-text .cta-actions { justify-content: center; }
+  .cta-block-visual { display: none; }
+}
+</style>
+
 {{/* ---- HERO ---- */}}
 {{ with .Params.hero }}
 <section class="hero">
   <div class="hero-bg">
+    {{ with .Params.hero.photo }}<div class="hero-photo-bg" style="--hero-photo: url('{{ . }}')"></div>{{ end }}
     <div class="hero-grain"></div>
     <div class="hero-gradient"></div>
     <svg class="hero-topo" viewBox="0 0 1200 600" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
@@ -106,8 +136,8 @@
     {{ with .items }}
     <div class="stufen-grid">
       {{ range $i, $stufe := . }}
-      <div class="stufe-card" data-animate="fade-up" data-delay="{{ $i }}">
-        <div class="stufe-color" style="--stufe-hue: {{ $stufe.hue }}"></div>
+      <div class="stufe-card" data-animate="fade-up" data-delay="{{ add $i 1 }}" style="--stufe-hue: {{ $stufe.hue }}">
+        <div class="stufe-color"></div>
         <div class="stufe-content">
           <h3 class="stufe-name">{{ $stufe.name }}</h3>
           <p class="stufe-age">{{ $stufe.age }}</p>
@@ -171,13 +201,24 @@
 <section class="section section-cta-block">
   <div class="content-width">
     <div class="cta-block" data-animate="fade-up">
-      <h2 class="cta-title">{{ .title }}</h2>
-      <p class="cta-text">{{ .text }}</p>
-      <div class="cta-actions">
-        {{ with .primary }}
-        <a href="{{ .url }}" class="btn btn-primary btn-light">{{ .text }}</a>
-        {{ end }}
-        <a href="mailto:{{ $.Site.Params.email }}" class="btn btn-outline btn-outline-light">{{ $.Site.Params.email }}</a>
+      <div class="cta-block-inner">
+        <div class="cta-block-text">
+          <h2 class="cta-title">{{ .title }}</h2>
+          <p class="cta-text">{{ .text }}</p>
+          <div class="cta-actions">
+            {{ with .primary }}
+            <a href="{{ .url }}" class="btn btn-primary btn-light">{{ .text }}</a>
+            {{ end }}
+            <a href="mailto:{{ $.Site.Params.email }}" class="btn btn-outline btn-outline-light">{{ $.Site.Params.email }}</a>
+          </div>
+        </div>
+        <div class="cta-block-visual" aria-hidden="true">
+          <svg viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.15">
+            <path d="M60 10 L10 110 H110 Z" stroke="currentColor" stroke-width="3" fill="none"/>
+            <path d="M60 35 L30 90 H90 Z" stroke="currentColor" stroke-width="2" fill="none" opacity="0.6"/>
+            <circle cx="60" cy="60" r="8" fill="currentColor" opacity="0.4"/>
+          </svg>
+        </div>
       </div>
     </div>
   </div>

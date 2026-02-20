@@ -2,6 +2,7 @@
 title: "Startseite"
 
 hero:
+  # photo: "/images/hero-langenwang.jpg"  # optional: uncomment to show a subtle bg photo
   badge: "Pfadfinder & Pfadfinderinnen"
   title_line1: "Pfadfinder"
   title_line2: "Langenwang"

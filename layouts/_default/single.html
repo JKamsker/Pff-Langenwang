@@ -1,5 +1,34 @@
 {{ define "main" }}
-<article class="page-single">
+<style>
+/* Datenschutz page — reduce content width for better readability */
+.dsgvo-content .page-content {
+  max-width: 780px;
+}
+.dsgvo-content .page-content p {
+  max-width: 70ch;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Override for the info card and TOC which need full width */
+.dsgvo-content .page-content .dsgvo-info-card,
+.dsgvo-content .page-content .dsgvo-toc {
+  max-width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+}
+.dsgvo-contact-cta {
+  margin-top: var(--space-xl);
+  padding-top: var(--space-lg);
+  border-top: 1px solid rgba(27, 58, 45, 0.08);
+  text-align: center;
+}
+.dsgvo-contact-cta p {
+  color: rgba(61, 46, 30, 0.65);
+  margin-bottom: var(--space-md) !important;
+  max-width: 100% !important;
+}
+</style>
+<article class="page-single dsgvo-content">
   <div class="page-hero">
     <div class="page-hero-inner">
       <h1 class="page-title" data-animate="fade-up">{{ .Title }}</h1>
@@ -10,7 +39,71 @@
   </div>
 
   <div class="page-content content-width" data-animate="fade-up" data-delay="2">
+    <div id="dsgvo-toc-placeholder"></div>
     {{ .Content }}
+
+    <div class="dsgvo-contact-cta">
+      <p>Fragen zur Verarbeitung Ihrer Daten? Wir helfen gerne weiter.</p>
+      <a href="mailto:pfadfinder.langenwang@aon.at" class="btn btn-primary">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        pfadfinder.langenwang@aon.at
+      </a>
+    </div>
   </div>
 </article>
+<script>
+(function () {
+  var content = document.querySelector('.dsgvo-content .page-content');
+  if (!content) return;
+
+  // 1. Add anchor IDs to all h2s and build TOC
+  var headings = content.querySelectorAll('h2');
+  var tocItems = [];
+  headings.forEach(function (h, i) {
+    var id = 'dsgvo-section-' + i;
+    h.id = id;
+    tocItems.push({ id: id, text: h.textContent });
+  });
+
+  // 2. Build and insert the TOC
+  var placeholder = document.getElementById('dsgvo-toc-placeholder');
+  if (placeholder && tocItems.length) {
+    var toc = document.createElement('nav');
+    toc.className = 'dsgvo-toc';
+    toc.setAttribute('aria-label', 'Inhaltsverzeichnis');
+    var tocTitle = document.createElement('div');
+    tocTitle.className = 'dsgvo-toc__title';
+    tocTitle.textContent = 'Inhalt';
+    toc.appendChild(tocTitle);
+    var ul = document.createElement('ul');
+    ul.className = 'dsgvo-toc__list';
+    tocItems.forEach(function (item) {
+      var li = document.createElement('li');
+      var a = document.createElement('a');
+      a.href = '#' + item.id;
+      a.textContent = item.text;
+      li.appendChild(a);
+      ul.appendChild(li);
+    });
+    toc.appendChild(ul);
+    placeholder.appendChild(toc);
+  }
+
+  // 3. Wrap the contact block (first section after "Verantwortlicher" h2) in an info card
+  headings.forEach(function (h) {
+    if (h.textContent.includes('Verantwortlicher')) {
+      var card = document.createElement('div');
+      card.className = 'dsgvo-info-card';
+      var next = h.nextElementSibling;
+      h.parentNode.insertBefore(card, next);
+      // Collect text nodes until next h2
+      while (next && next.tagName !== 'H2') {
+        var tmp = next.nextElementSibling;
+        card.appendChild(next);
+        next = tmp;
+      }
+    }
+  });
+})();
+</script>
 {{ end }}

@@ -2,7 +2,10 @@
 <article class="venue">
 
   {{/* ── HERO with background image ── */}}
-  <div class="venue-hero" {{ with .Params.heroImage }}style="background-image: url('{{ . }}')"{{ end }}>
+  <div class="venue-hero">
+    {{ with .Params.heroImage }}
+    <div class="venue-hero__bg" style="--venue-bg-img: url('{{ . }}')"></div>
+    {{ end }}
     <div class="venue-hero-overlay"></div>
     <div class="venue-hero-content" data-animate="fade-up">
       {{ with .Params.address }}

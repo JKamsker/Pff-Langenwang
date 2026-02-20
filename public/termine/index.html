@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="de-AT">
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Termine &amp; Heimstunden | Pfadfinder Langenwang</title>
 <meta name="description" content="Offizielle Seite der Pfadfinder und Pfadfinderinnen Langenwang">
@@ -65,6 +65,32 @@
   </div>
 </header>
 <main>
+<style>
+.termine-event-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.termine-event-card__type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  background: rgba(107, 143, 113, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+.termine-event-card__date {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(61, 46, 30, 0.5);
+}
+.termine-cta {
+  margin-top: var(--space-xl);
+}
+</style>
 <section class="page-single">
   <div class="page-hero">
     <div class="page-hero-inner">
@@ -84,12 +110,16 @@
     
     <div class="card-grid">
       
-      <a href="/termine/kindermaskenball-2026/" class="card" data-animate="fade-up">
+      <a href="/termine/kindermaskenball-2026/" class="card termine-event-card" data-animate="fade-up">
+        <div class="termine-event-card__header">
+          <span class="termine-event-card__type">Veranstaltung</span>
+          <span class="termine-event-card__date">15.02.2026</span>
+        </div>
         <h3 class="card-title">Kindermaskenball 2026</h3>
         
         <p class="card-subtitle">Sonntag, 15.02.2026 · 14:00 Uhr · Volkshaus Langenwang</p>
         
-        <span class="card-arrow">&rarr;</span>
+        <span class="card-arrow">Mehr erfahren &rarr;</span>
       </a>
       
     </div>
@@ -103,67 +133,119 @@
     
 
     
-    <h3>Zeiten</h3>
-    <table class="schedule-table">
-      <thead>
-        <tr>
-          <th>Stufe</th>
-          <th>Tag &amp; Uhrzeit</th>
-          <th>Geschlecht</th>
-          <th>Alter</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-        <tr>
-          <td><strong>Wichtel</strong></td>
-          <td>Samstag, 14:00 Uhr</td>
-          <td>Mädchen</td>
-          <td>6 – 10 Jahre</td>
-        </tr>
-        
-        <tr>
-          <td><strong>Wölflinge</strong></td>
-          <td>Samstag, 14:00 Uhr</td>
-          <td>Buben</td>
-          <td>6 – 10 Jahre</td>
-        </tr>
-        
-        <tr>
-          <td><strong>Guides</strong></td>
-          <td>Samstag, 15:00 Uhr</td>
-          <td>Mädchen</td>
-          <td>10 – 14 Jahre</td>
-        </tr>
-        
-        <tr>
-          <td><strong>Späher</strong></td>
-          <td>Samstag, 15:00 Uhr</td>
-          <td>Buben</td>
-          <td>10 – 14 Jahre</td>
-        </tr>
-        
-        <tr>
-          <td><strong>Caravelles</strong></td>
-          <td>Samstag, nach Absprache</td>
-          <td>Mädchen</td>
-          <td>ab 14 Jahre</td>
-        </tr>
-        
-        <tr>
-          <td><strong>Explorer</strong></td>
-          <td>Samstag, nach Absprache</td>
-          <td>Buben</td>
-          <td>ab 14 Jahre</td>
-        </tr>
-        
-      </tbody>
-    </table>
+    <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; color: var(--sage); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; margin-top: var(--space-lg);">Zeiten</h3>
+    <div class="sched-grid">
+      
+      
+      
+      
+      <div class="sched-card" data-animate="fade-up" data-delay="1" style="--sched-hue: 35">
+        <div class="sched-card__accent"></div>
+        <div class="sched-card__body">
+          <div class="sched-card__stufe">Wichtel</div>
+          <div class="sched-card__day">Samstag, 14:00 Uhr</div>
+          <div class="sched-card__badges">
+            <span class="sched-card__badge">Mädchen</span>
+            <span class="sched-card__badge">6 – 10 Jahre</span>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="sched-card" data-animate="fade-up" data-delay="2" style="--sched-hue: 35">
+        <div class="sched-card__accent"></div>
+        <div class="sched-card__body">
+          <div class="sched-card__stufe">Wölflinge</div>
+          <div class="sched-card__day">Samstag, 14:00 Uhr</div>
+          <div class="sched-card__badges">
+            <span class="sched-card__badge">Buben</span>
+            <span class="sched-card__badge">6 – 10 Jahre</span>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="sched-card" data-animate="fade-up" data-delay="3" style="--sched-hue: 145">
+        <div class="sched-card__accent"></div>
+        <div class="sched-card__body">
+          <div class="sched-card__stufe">Guides</div>
+          <div class="sched-card__day">Samstag, 15:00 Uhr</div>
+          <div class="sched-card__badges">
+            <span class="sched-card__badge">Mädchen</span>
+            <span class="sched-card__badge">10 – 14 Jahre</span>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="sched-card" data-animate="fade-up" data-delay="4" style="--sched-hue: 145">
+        <div class="sched-card__accent"></div>
+        <div class="sched-card__body">
+          <div class="sched-card__stufe">Späher</div>
+          <div class="sched-card__day">Samstag, 15:00 Uhr</div>
+          <div class="sched-card__badges">
+            <span class="sched-card__badge">Buben</span>
+            <span class="sched-card__badge">10 – 14 Jahre</span>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="sched-card" data-animate="fade-up" data-delay="5" style="--sched-hue: 200">
+        <div class="sched-card__accent"></div>
+        <div class="sched-card__body">
+          <div class="sched-card__stufe">Caravelles</div>
+          <div class="sched-card__day">Samstag, nach Absprache</div>
+          <div class="sched-card__badges">
+            <span class="sched-card__badge">Mädchen</span>
+            <span class="sched-card__badge">ab 14 Jahre</span>
+          </div>
+        </div>
+      </div>
+      
+      
+      
+      
+      <div class="sched-card" data-animate="fade-up" data-delay="6" style="--sched-hue: 200">
+        <div class="sched-card__accent"></div>
+        <div class="sched-card__body">
+          <div class="sched-card__stufe">Explorer</div>
+          <div class="sched-card__day">Samstag, nach Absprache</div>
+          <div class="sched-card__badges">
+            <span class="sched-card__badge">Buben</span>
+            <span class="sched-card__badge">ab 14 Jahre</span>
+          </div>
+        </div>
+      </div>
+      
+    </div>
     
 
     
     <p>Für Information stehen wir Dir gerne zur Verfügung! Jeden <strong>Dienstag ab 19:00 Uhr</strong> im Pfadfinderheim und in den Heimstunden. Telefon: <strong>+43 664 9373662</strong> oder <strong>+43 664 5363953</strong>.</p>
     
+
+    <div class="termine-cta" data-animate="fade-up">
+      <div class="venue-cta-block">
+        <div class="venue-cta-bg"></div>
+        <div class="venue-cta-inner">
+          <h2 class="venue-cta-title">Noch Fragen?</h2>
+          <p class="venue-cta-text">Jeden Dienstag ab 19:00 Uhr im Pfadfinderheim oder einfach anrufen.</p>
+          <a href="/kontakt/" class="btn btn-light venue-cta-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 

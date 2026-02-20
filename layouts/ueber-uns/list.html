@@ -1,4 +1,74 @@
 {{ define "main" }}
+<style>
+/* Enhanced h2 styling within page-content for this page */
+.page-content h2 {
+  position: relative;
+  padding-bottom: 0.5rem;
+  margin-bottom: var(--space-sm) !important;
+}
+.page-content h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 2rem;
+  height: 2px;
+  background: var(--amber);
+  border-radius: 2px;
+}
+
+/* Bridge section */
+.ueber-uns-bridge {
+  border-top: 1px solid rgba(27, 58, 45, 0.1);
+  padding-top: var(--space-lg);
+  margin-top: var(--space-lg);
+  margin-bottom: var(--space-md);
+}
+.ueber-uns-bridge__title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-variation-settings: "opsz" 72;
+  font-size: clamp(1.75rem, 3vw, 2.5rem);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--forest);
+  margin-bottom: var(--space-xs);
+  /* Override the ::after pseudo from h2 above since it's a section title */
+  padding-bottom: 0 !important;
+}
+.ueber-uns-bridge__title::after {
+  display: none !important;
+}
+.ueber-uns-bridge__text {
+  font-size: 1.05rem;
+  color: rgba(61, 46, 30, 0.65);
+  max-width: 560px;
+}
+
+/* Improve the gruppenleitung photo rendering */
+.page-content img {
+  border-radius: var(--radius-md);
+  box-shadow: 0 8px 32px rgba(27, 58, 45, 0.12);
+  margin-bottom: var(--space-md);
+  border: 1px solid rgba(27, 58, 45, 0.07);
+}
+
+/* Style "Unsere Geschichte" as a timeline — The h2 "Unsere Geschichte" and its following paragraphs get timeline treatment */
+.page-content .history-section {
+  position: relative;
+  padding-left: var(--space-lg);
+}
+.page-content .history-section::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5rem;
+  bottom: 0.5rem;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--amber), var(--sage), rgba(107,143,113,0.1));
+  border-radius: 2px;
+}
+</style>
 <section class="page-single">
   <div class="page-hero">
     <div class="page-hero-inner">
@@ -12,13 +82,41 @@
   <div class="page-content content-width" data-animate="fade-up" data-delay="2">
     {{ .Content }}
 
+    <script>
+(function() {
+  // Find the "Unsere Geschichte" h2 and wrap subsequent paragraphs
+  var headings = document.querySelectorAll('.page-content h2');
+  headings.forEach(function(h) {
+    if (h.textContent.trim().includes('Geschichte')) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'history-section';
+      var next = h.nextElementSibling;
+      // Insert wrapper after h2
+      h.parentNode.insertBefore(wrapper, next);
+      // Move all following p tags until next h2 into wrapper
+      while (next && next.tagName !== 'H2') {
+        var tmp = next.nextElementSibling;
+        wrapper.appendChild(next);
+        next = tmp;
+      }
+    }
+  });
+})();
+</script>
+
+    <div class="ueber-uns-bridge" data-animate="fade-up">
+      <span class="section-label">Unser Team</span>
+      <h2 class="ueber-uns-bridge__title">Gruppenleitung</h2>
+      <p class="ueber-uns-bridge__text">Unsere erfahrenen Gruppenleiterinnen und Gruppenleiter begleiten die Jugendlichen bei ihrem Abenteuer.</p>
+    </div>
+
     {{ with .Params.leaders }}
     <div class="leader-grid">
-      {{ range . }}
-      <div class="leader-card">
-        <div class="leader-avatar">{{ .initials }}</div>
-        <h3>{{ .name }}</h3>
-        <p class="leader-role">{{ .role }}</p>
+      {{ range $i, $l := . }}
+      <div class="leader-card" data-animate="fade-up" data-delay="{{ add $i 1 }}">
+        <div class="leader-avatar">{{ $l.initials }}</div>
+        <h3>{{ $l.name }}</h3>
+        <p class="leader-role">{{ $l.role }}</p>
       </div>
       {{ end }}
     </div>

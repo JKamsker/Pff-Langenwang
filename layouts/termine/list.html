@@ -1,4 +1,30 @@
 {{ define "main" }}
+<style>
+.termine-event-card__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+.termine-event-card__type {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--sage);
+  background: rgba(107, 143, 113, 0.1);
+  padding: 0.2rem 0.6rem;
+  border-radius: 100px;
+}
+.termine-event-card__date {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: rgba(61, 46, 30, 0.5);
+}
+.termine-cta {
+  margin-top: var(--space-xl);
+}
+</style>
 <section class="page-single">
   <div class="page-hero">
     <div class="page-hero-inner">
@@ -15,14 +41,16 @@
     {{ if .Pages }}
     <div class="card-grid">
       {{ range .Pages.ByDate.Reverse }}
-      <a href="{{ .RelPermalink }}" class="card" data-animate="fade-up">
+      <a href="{{ .RelPermalink }}" class="card termine-event-card" data-animate="fade-up">
+        <div class="termine-event-card__header">
+          <span class="termine-event-card__type">Veranstaltung</span>
+          <span class="termine-event-card__date">{{ .Date.Format "02.01.2006" }}</span>
+        </div>
         <h3 class="card-title">{{ .Title }}</h3>
         {{ with .Params.subtitle }}
         <p class="card-subtitle">{{ . }}</p>
-        {{ else }}
-        <p class="card-subtitle">{{ .Date.Format "02.01.2006" }}</p>
         {{ end }}
-        <span class="card-arrow">&rarr;</span>
+        <span class="card-arrow">Mehr erfahren &rarr;</span>
       </a>
       {{ end }}
     </div>
@@ -34,32 +62,44 @@
     {{ end }}
 
     {{ with .Params.schedule }}
-    <h3>Zeiten</h3>
-    <table class="schedule-table">
-      <thead>
-        <tr>
-          <th>Stufe</th>
-          <th>Tag &amp; Uhrzeit</th>
-          <th>Geschlecht</th>
-          <th>Alter</th>
-        </tr>
-      </thead>
-      <tbody>
-        {{ range . }}
-        <tr>
-          <td><strong>{{ .stufe }}</strong></td>
-          <td>{{ .day }}</td>
-          <td>{{ .gender }}</td>
-          <td>{{ .age }}</td>
-        </tr>
-        {{ end }}
-      </tbody>
-    </table>
+    <h3 style="font-family: var(--font-display); font-size: 1.1rem; font-weight: 500; color: var(--sage); letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 0.5rem; margin-top: var(--space-lg);">Zeiten</h3>
+    <div class="sched-grid">
+      {{ range $i, $s := . }}
+      {{ $hue := 145 }}
+      {{ if or (eq $s.stufe "Wichtel") (eq $s.stufe "Wölflinge") }}{{ $hue = 35 }}{{ end }}
+      {{ if or (eq $s.stufe "Caravelles") (eq $s.stufe "Explorer") }}{{ $hue = 200 }}{{ end }}
+      <div class="sched-card" data-animate="fade-up" data-delay="{{ add $i 1 }}" style="--sched-hue: {{ $hue }}">
+        <div class="sched-card__accent"></div>
+        <div class="sched-card__body">
+          <div class="sched-card__stufe">{{ $s.stufe }}</div>
+          <div class="sched-card__day">{{ $s.day }}</div>
+          <div class="sched-card__badges">
+            <span class="sched-card__badge">{{ $s.gender }}</span>
+            <span class="sched-card__badge">{{ $s.age }}</span>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
     {{ end }}
 
     {{ with .Params.info }}
     <p>{{ . | markdownify }}</p>
     {{ end }}
+
+    <div class="termine-cta" data-animate="fade-up">
+      <div class="venue-cta-block">
+        <div class="venue-cta-bg"></div>
+        <div class="venue-cta-inner">
+          <h2 class="venue-cta-title">Noch Fragen?</h2>
+          <p class="venue-cta-text">Jeden Dienstag ab 19:00 Uhr im Pfadfinderheim oder einfach anrufen.</p>
+          <a href="/kontakt/" class="btn btn-light venue-cta-btn">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            Kontakt aufnehmen
+          </a>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 {{ end }}
