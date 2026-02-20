@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Huetten &amp; Heime on Pfadfinder Langenwang</title>
-    <link>http://localhost:1313/huetten/</link>
+    <link>https://pfadfinder-langenwang.at/huetten/</link>
     <description>Recent content in Huetten &amp; Heime on Pfadfinder Langenwang</description>
     <generator>Hugo</generator>
     <language>de-AT</language>
-    <atom:link href="http://localhost:1313/huetten/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://pfadfinder-langenwang.at/huetten/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Das Pfadfinderheim</title>
-      <link>http://localhost:1313/huetten/pfadfinderheim/</link>
+      <link>https://pfadfinder-langenwang.at/huetten/pfadfinderheim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/huetten/pfadfinderheim/</guid>
+      <guid>https://pfadfinder-langenwang.at/huetten/pfadfinderheim/</guid>
       <description>&lt;p&gt;Das Pfadfinderheim befindet sich an der &lt;strong&gt;Grazerstrasse 26 in Langenwang&lt;/strong&gt; und ist das Zentrum unserer Pfadfinderarbeit.&lt;/p&gt;&#xA;&lt;h2 id=&#34;raeumlichkeiten&#34;&gt;Raeumlichkeiten&lt;/h2&gt;&#xA;&lt;h3 id=&#34;grosser-saal&#34;&gt;Grosser Saal&lt;/h3&gt;&#xA;&lt;p&gt;Der grosse Saal wird fuer Heimstunden und Gruppenratssitzungen genutzt. Der Raum verfuegt ueber verschiebbare Tische und Stuehle, die je nach Bedarf angeordnet werden koennen, sowie einen Projektor und eine Tonanlage fuer Praesentationen und Veranstaltungen.&lt;/p&gt;&#xA;&lt;h3 id=&#34;kueche&#34;&gt;Kueche&lt;/h3&gt;&#xA;&lt;p&gt;Die Kueche ist mit Herd, Backofen, Kuehlschrank und Geschirrspueler ausgestattet — ideal fuer die Verpflegung bei unseren Aktivitaeten.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Die Bootshuette</title>
-      <link>http://localhost:1313/huetten/bootshuette/</link>
+      <link>https://pfadfinder-langenwang.at/huetten/bootshuette/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/huetten/bootshuette/</guid>
+      <guid>https://pfadfinder-langenwang.at/huetten/bootshuette/</guid>
       <description>&lt;p&gt;Die Bootshuette ist eine Freizeiteinrichtung am Gelaende unseres Lagerplatzes und bietet eine Vielzahl an Moeglichkeiten fuer Outdoor-Aktivitaeten.&lt;/p&gt;&#xA;&lt;h2 id=&#34;ausstattung&#34;&gt;Ausstattung&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;&lt;strong&gt;Bootshaus&lt;/strong&gt; mit Wassersportausruestung&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Tretboot, Kanus und Kajaks&lt;/strong&gt; fuer Wasserspass&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Sanitaeranlagen&lt;/strong&gt; mit Toiletten, Duschen und einem grossen Waschbecken&lt;/li&gt;&#xA;&lt;li&gt;&lt;strong&gt;Kleine Huette&lt;/strong&gt; mit gemuetlichem Essbereich&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;reservierung&#34;&gt;Reservierung&lt;/h2&gt;&#xA;&lt;p&gt;Die Bootshuette kann fuer Lager und Veranstaltungen gemietet werden.&lt;/p&gt;&#xA;&lt;p&gt;Fuer Reservierungen kontaktiere uns bitte per E-Mail: &lt;strong&gt;&lt;a href=&#34;mailto:bootshuette.langenwang@gmail.com&#34;&gt;bootshuette.langenwang@gmail.com&lt;/a&gt;&lt;/strong&gt;&lt;/p&gt;</description>
     </item>
   </channel>

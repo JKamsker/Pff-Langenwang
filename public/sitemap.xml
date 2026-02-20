@@ -2,26 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/categories/</loc>
+    <loc>https://pfadfinder-langenwang.at/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/huetten/pfadfinderheim/</loc>
+    <loc>https://pfadfinder-langenwang.at/huetten/pfadfinderheim/</loc>
   </url><url>
-    <loc>http://localhost:1313/huetten/bootshuette/</loc>
+    <loc>https://pfadfinder-langenwang.at/huetten/bootshuette/</loc>
   </url><url>
-    <loc>http://localhost:1313/gruppenleitung/</loc>
+    <loc>https://pfadfinder-langenwang.at/gruppenleitung/</loc>
   </url><url>
-    <loc>http://localhost:1313/heimstunden/</loc>
+    <loc>https://pfadfinder-langenwang.at/heimstunden/</loc>
   </url><url>
-    <loc>http://localhost:1313/huetten/</loc>
+    <loc>https://pfadfinder-langenwang.at/huetten/</loc>
   </url><url>
-    <loc>http://localhost:1313/kontakt/</loc>
+    <loc>https://pfadfinder-langenwang.at/kontakt/</loc>
   </url><url>
-    <loc>http://localhost:1313/</loc>
+    <loc>https://pfadfinder-langenwang.at/</loc>
   </url><url>
-    <loc>http://localhost:1313/tags/</loc>
+    <loc>https://pfadfinder-langenwang.at/tags/</loc>
   </url><url>
-    <loc>http://localhost:1313/termine/</loc>
+    <loc>https://pfadfinder-langenwang.at/termine/</loc>
   </url><url>
-    <loc>http://localhost:1313/ueber-uns/</loc>
+    <loc>https://pfadfinder-langenwang.at/ueber-uns/</loc>
   </url>
 </urlset>
