@@ -8,10 +8,10 @@ date: 2026-02-15T14:00:00+01:00
 
 ## Einladung zum 69. Langenwanger Kinderball
 
-**Das Fest fuer alle Kinder!** Eintritt: EUR 4,-
+**Das Fest für alle Kinder!** Eintritt: EUR 4,-
 
 - Stimmung
-- Froehlichkeit
+- Fröhlichkeit
 - lustige Spiele
 
-Jedes Kind erhaelt ein Geschenk! Verlosung von tollen Preisen!
+Jedes Kind erhält ein Geschenk! Verlosung von tollen Preisen!

@@ -1,43 +1,59 @@
 {{ define "main" }}
-<section class="page-single">
-  <div class="page-hero">
-    <div class="page-hero-inner">
-      <h1 class="page-title" data-animate="fade-up">{{ .Title }}</h1>
+<article class="huetten-overview">
+
+  {{/* ── CINEMATIC SPLIT HERO ── */}}
+  <section class="vsh" aria-label="Unsere Räumlichkeiten">
+
+    <div class="vsh-label" data-animate="fade-up">
+      <h1 class="vsh-label__title">{{ .Title }}</h1>
       {{ with .Params.subtitle }}
-      <p class="page-subtitle" data-animate="fade-up" data-delay="1">{{ . }}</p>
+      <p class="vsh-label__sub">{{ . }}</p>
       {{ end }}
     </div>
-  </div>
 
-  <div class="page-content content-width" data-animate="fade-up" data-delay="2">
-    {{ .Content }}
-
-    {{ if .Pages }}
-    <div class="venue-card-grid">
-      {{ range .Pages }}
-      <a href="{{ .RelPermalink }}" class="venue-card" data-animate="fade-up">
-        {{ with .Params.heroImage }}
-        <div class="venue-card-image">
-          <img src="{{ . }}" alt="{{ $.Title }}" loading="lazy">
-        </div>
-        {{ end }}
-        <div class="venue-card-body">
-          <h3 class="venue-card-title">{{ .Title }}</h3>
-          {{ with .Params.subtitle }}
-          <p class="venue-card-subtitle">{{ . }}</p>
+    <div class="vsh-panels">
+      {{ range $i, $p := .Pages }}
+      <a href="{{ $p.RelPermalink }}" class="vsh-panel" {{ with $p.Params.heroImage }}style="--panel-bg: url('{{ . }}')"{{ end }}>
+        <div class="vsh-panel__img"></div>
+        <div class="vsh-panel__fog"></div>
+        <div class="vsh-panel__body">
+          <span class="vsh-panel__counter">0{{ add $i 1 }}</span>
+          <h2 class="vsh-panel__name">{{ $p.Title }}</h2>
+          {{ with $p.Params.subtitle }}
+          <p class="vsh-panel__tagline">{{ . }}</p>
           {{ end }}
-          {{ with .Params.intro }}
-          <p class="venue-card-desc">{{ . | markdownify | plainify | truncate 120 }}</p>
+          {{ with $p.Params.intro }}
+          <p class="vsh-panel__peek">{{ . | markdownify | plainify | truncate 110 "…" }}</p>
           {{ end }}
-          <span class="venue-card-link">
-            Mehr erfahren
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+          <span class="vsh-panel__go">
+            Entdecken
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
           </span>
         </div>
       </a>
       {{ end }}
     </div>
-    {{ end }}
-  </div>
-</section>
+
+    <div class="vsh-scroll-hint" aria-hidden="true">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </div>
+
+  </section>
+
+  {{/* ── INTRO ── */}}
+  {{ with .Content }}
+  <section class="huetten-intro" data-animate="fade-up">
+    <div class="huetten-intro__inner content-width">
+      <div class="huetten-intro__text">
+        {{ . }}
+      </div>
+      <a href="/kontakt/" class="btn btn-primary huetten-intro__cta">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        Jetzt anfragen
+      </a>
+    </div>
+  </section>
+  {{ end }}
+
+</article>
 {{ end }}

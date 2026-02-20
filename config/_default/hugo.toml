@@ -6,7 +6,7 @@ title = "Pfadfinder Langenwang"
 [params]
   subtitle = "…mehr erleben"
   description = "Offizielle Seite der Pfadfinder und Pfadfinderinnen Langenwang"
-  address = "Grazerstrasse 26, 8665 Langenwang"
+  address = "Grazerstraße 26, 8665 Langenwang"
   email = "pfadfinder.langenwang@aon.at"
   phone = "+43 664 9373662"
   boatHutEmail = "bootshuette.langenwang@gmail.com"
@@ -18,13 +18,17 @@ title = "Pfadfinder Langenwang"
     url = "/termine/"
     weight = 1
   [[menus.main]]
-    name = "Ueber uns"
+    name = "Über uns"
     url = "/ueber-uns/"
     weight = 2
   [[menus.main]]
+    name = "Hütten & Heime"
+    url = "/huetten/"
+    weight = 3
+  [[menus.main]]
     name = "Kontakt"
     url = "/kontakt/"
-    weight = 3
+    weight = 4
 
   # Footer navigation (all pages)
   [[menus.footer]]
@@ -36,11 +40,11 @@ title = "Pfadfinder Langenwang"
     url = "/termine/"
     weight = 2
   [[menus.footer]]
-    name = "Ueber uns"
+    name = "Über uns"
     url = "/ueber-uns/"
     weight = 3
   [[menus.footer]]
-    name = "Huetten & Heime"
+    name = "Hütten & Heime"
     url = "/huetten/"
     weight = 4
   [[menus.footer]]

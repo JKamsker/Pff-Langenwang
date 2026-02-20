@@ -4,7 +4,7 @@ subtitle: "So erreichst du uns"
 
 address:
   name: "Pfadfinderheim Langenwang"
-  street: "Grazerstrasse 26, 8665 Langenwang"
+  street: "Grazerstraße 26, 8665 Langenwang"
 
 leadership:
   - name: "Sepp Windhaber"
@@ -17,11 +17,11 @@ leadership:
     phone: "+43 664 5363953"
 
 sections:
-  - title: "Wichtel & Woelflinge"
+  - title: "Wichtel & Wölflinge"
     contacts:
       - name: "Rebecca Shickle"
         phone: "0677/62522982"
-  - title: "Guides & Spaeher"
+  - title: "Guides & Späher"
     contacts:
       - name: "Alina Schabereiter"
         phone: "0650/4414635"

@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Huetten &amp; Heime on Pfadfinder Langenwang</title>
-    <link>https://pfadfinder-langenwang.at/huetten/</link>
-    <description>Recent content in Huetten &amp; Heime on Pfadfinder Langenwang</description>
+    <title>Hütten &amp; Heime on Pfadfinder Langenwang</title>
+    <link>http://localhost:1313/huetten/</link>
+    <description>Recent content in Hütten &amp; Heime on Pfadfinder Langenwang</description>
     <generator>Hugo</generator>
     <language>de-AT</language>
-    <atom:link href="https://pfadfinder-langenwang.at/huetten/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/huetten/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Das Pfadfinderheim</title>
-      <link>https://pfadfinder-langenwang.at/huetten/pfadfinderheim/</link>
+      <link>http://localhost:1313/huetten/pfadfinderheim/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pfadfinder-langenwang.at/huetten/pfadfinderheim/</guid>
+      <guid>http://localhost:1313/huetten/pfadfinderheim/</guid>
       <description></description>
     </item>
     <item>
-      <title>Die Bootshuette</title>
-      <link>https://pfadfinder-langenwang.at/huetten/bootshuette/</link>
+      <title>Die Bootshütte</title>
+      <link>http://localhost:1313/huetten/bootshuette/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://pfadfinder-langenwang.at/huetten/bootshuette/</guid>
+      <guid>http://localhost:1313/huetten/bootshuette/</guid>
       <description></description>
     </item>
   </channel>
